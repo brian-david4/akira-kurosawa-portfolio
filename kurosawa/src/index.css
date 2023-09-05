@@ -1,0 +1,12 @@
+:root {
+    --homeBg: #8DD3FF;
+    --ylwBg: #FFF88D;
+    --redBg: #D14041;
+    --prplBg: #BAC1FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
