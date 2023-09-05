@@ -3,11 +3,13 @@
     width: 100%;
     background-color: var(--homeBg);
     display: flex;
+    z-index: -10;
 }
 
 .fortiesSection, .fiftiesSection, .sixtiesSection, .restOfSection {
     width: 25%;
     height: 100%;
+    z-index: 0;
 }
 .fortiesSection {
     background-color: var(--homeBg);
@@ -20,4 +22,8 @@
 }
 .restOfSection {
     background-color: var(--prplBg);
+}
+
+h1 {
+    position: absolute;
 }
