@@ -4,6 +4,8 @@ import highlow from "../images/highlow.webp";
 import mada from "../images/madadayo.webp";
 import seven from "../images/seven.webp";
 import yojimbo from "../images/yojimbo.webp"
+import { AnimatePresence, motion } from "framer-motion";
+import { decadeImageFade } from "./HomeAnim";
 
 const Home = () => {
     const [isFortiesActive, setIsFortiesActive] = useState(false);
@@ -18,17 +20,25 @@ const Home = () => {
         <div onMouseEnter={() => setIsSixtiesActive(true)} onMouseLeave={() => setIsSixtiesActive(false)} className={styles.sixtiesSection}></div>
         <div onMouseEnter={() => setIsRestActive(true)} onMouseLeave={() => setIsRestActive(false)} className={styles.restOfSection}></div>
         
-        {isFortiesActive && 
-        <div className={`${styles.forties} ${styles.backgroundImage}`}><img src={seven}/></div> }
-        
-        {isFiftiesActive && 
-        <div className={`${styles.fifties} ${styles.backgroundImage}`}><img src={yojimbo}/></div> }
-        
-        {isSixtiesActive && 
-        <div className={`${styles.sixties} ${styles.backgroundImage}`}><img src={highlow}/></div>}
-        
-        {isRestActive && 
-        <div className={`${styles.rest} ${styles.backgroundImage}`}><img src={mada}/></div>}
+        <AnimatePresence mode="wait">
+            {isFortiesActive &&
+            <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={seven}/></motion.div> }
+        </AnimatePresence>
+            
+            <AnimatePresence mode="wait">
+                {isFiftiesActive &&
+                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={yojimbo}/></motion.div> }
+            </AnimatePresence>
+            
+            <AnimatePresence mode="wait">
+                {isSixtiesActive &&
+                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={highlow}/></motion.div>}
+            </AnimatePresence>
+            
+            <AnimatePresence mode="wait">
+                {isRestActive &&
+                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={mada}/></motion.div>}
+            </AnimatePresence>
 
     </div>
 
