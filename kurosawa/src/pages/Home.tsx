@@ -23,27 +23,42 @@ const Home = () => {
         
         <AnimatePresence mode="wait">
             {isFortiesActive &&
-            <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={seven}/></motion.div> }
+            <>
+            <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={seven}/></motion.div>
+            <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit">40's</motion.h1>
+            </>}
         </AnimatePresence>
             
             <AnimatePresence mode="wait">
                 {isFiftiesActive &&
-                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={yojimbo}/></motion.div> }
+                <>
+                    <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={yojimbo}/></motion.div>
+                    <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit">50's</motion.h1>
+                </>}
             </AnimatePresence>
             
             <AnimatePresence mode="wait">
                 {isSixtiesActive &&
-                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={highlow}/></motion.div>}
+                <>
+                    <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={highlow}/></motion.div>
+                    <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit">60's</motion.h1>
+                </>}
             </AnimatePresence>
             
             <AnimatePresence mode="wait">
                 {isRestActive &&
-                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={mada}/></motion.div>}
+                <>
+                    <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={mada}/></motion.div>
+                    <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit">70-98</motion.h1>
+                </>}
             </AnimatePresence>
 
             <AnimatePresence mode="wait">
                 {!isFortiesActive && !isFiftiesActive && !isSixtiesActive && !isRestActive && 
-                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={ran}/></motion.div>}
+                <>
+                    <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={ran}/></motion.div>
+                    <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit"></motion.h1>
+                </>}
             </AnimatePresence>
 
     </div>
