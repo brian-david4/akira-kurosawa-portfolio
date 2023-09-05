@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styles from "./Home.module.css";
+import { AnimatePresence, motion } from "framer-motion";
 import highlow from "../images/highlow.webp";
 import mada from "../images/madadayo.webp";
 import seven from "../images/seven.webp";
-import yojimbo from "../images/yojimbo.webp"
-import { AnimatePresence, motion } from "framer-motion";
+import yojimbo from "../images/yojimbo.webp";
+import ran from "../images/ran1.webp";
 import { decadeImageFade } from "./HomeAnim";
 
 const Home = () => {
@@ -38,6 +39,11 @@ const Home = () => {
             <AnimatePresence mode="wait">
                 {isRestActive &&
                 <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={mada}/></motion.div>}
+            </AnimatePresence>
+
+            <AnimatePresence mode="wait">
+                {!isFortiesActive && !isFiftiesActive && !isSixtiesActive && !isRestActive && 
+                <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={ran}/></motion.div>}
             </AnimatePresence>
 
     </div>

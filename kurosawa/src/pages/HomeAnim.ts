@@ -4,7 +4,7 @@ export const decadeImageFade = {
     },
     enter: {
         opacity: 1,
-        transition: {duration: 0.3, ease: [0.11, 0, 0.5, 0]}
+        transition: {duration: 0.2, ease: [0.11, 0, 0.5, 0]}
     },
     exit: {
         opacity: 0,
