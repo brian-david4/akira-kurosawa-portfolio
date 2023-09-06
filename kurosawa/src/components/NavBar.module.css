@@ -24,11 +24,12 @@
     width: 80%;
     height: 50%;
     z-index: 9;
-    border-radius: 20px;
+    border-radius: 18px;
     backdrop-filter: blur(20px);
     box-shadow: none; 
     background-color: rgba(255, 255, 255, 0.1);
     pointer-events: stroke;
+    transform-origin: right;
 
     display: flex;
     justify-content: space-around;
@@ -38,7 +39,7 @@
     text-decoration: none;
     color: ivory;
     font-family: 'Supreme', sans-serif;
-    mix-blend-mode: overlay;
+    font-size: 0.9rem;
     user-select: none;
     cursor: pointer;
 }

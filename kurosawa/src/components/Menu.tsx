@@ -1,6 +1,7 @@
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import NavBar from "./NavBar";
 import styles from "./NavBar.module.css";
-import { useState } from "react";
 
 const Menu = () => {
     const [isMenuActive, setIsMenuActive] = useState(false); 
@@ -8,7 +9,7 @@ const Menu = () => {
   return (
     <>
     <div onClick={()=>setIsMenuActive(!isMenuActive)} className={styles.menuBtn}></div>
-    {isMenuActive && <NavBar />}
+    <AnimatePresence mode="wait">{isMenuActive && <NavBar />}</AnimatePresence>
     </>
   )
 }
