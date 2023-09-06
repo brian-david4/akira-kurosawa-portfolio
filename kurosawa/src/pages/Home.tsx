@@ -16,10 +16,10 @@ const Home = () => {
     const [isRestActive, setIsRestActive] = useState(false);
 
     const activeWrap = (key: number) => {
-        if(key === 0) return setIsFortiesActive(true); setIsFiftiesActive(false); setIsSixtiesActive(false); setIsRestActive(false);
-        if(key === 1) return setIsFortiesActive(false); setIsFiftiesActive(true); setIsSixtiesActive(false); setIsRestActive(false);
-        if(key === 2) return setIsFortiesActive(false); setIsFiftiesActive(false); setIsSixtiesActive(true); setIsRestActive(false);
-        if(key === 3) return setIsFortiesActive(false); setIsFiftiesActive(false); setIsSixtiesActive(false); setIsRestActive(true);
+        if(key === 0) return setIsFortiesActive(true), setIsFiftiesActive(false), setIsSixtiesActive(false), setIsRestActive(false);
+        if(key === 1) return setIsFortiesActive(false), setIsFiftiesActive(true), setIsSixtiesActive(false), setIsRestActive(false);
+        if(key === 2) return setIsFortiesActive(false), setIsFiftiesActive(false), setIsSixtiesActive(true), setIsRestActive(false);
+        if(key === 3) return setIsFortiesActive(false), setIsFiftiesActive(false), setIsSixtiesActive(false), setIsRestActive(true);
     }
 
   return (
