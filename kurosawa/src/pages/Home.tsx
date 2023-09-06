@@ -7,6 +7,7 @@ import seven from "../images/seven.webp";
 import yojimbo from "../images/yojimbo.webp";
 import ran from "../images/ran1.webp";
 import { decadeImageFade } from "./HomeAnim";
+import Menu from "../components/Menu";
 
 const Home = () => {
     const [isFortiesActive, setIsFortiesActive] = useState(false);
@@ -16,6 +17,7 @@ const Home = () => {
 
   return (
     <div className={styles.pageBg}>
+        <Menu />
         <div onMouseEnter={() => setIsFortiesActive(true)} onMouseLeave={() => setIsFortiesActive(false)} className={styles.fortiesSection}></div>
         <div onMouseEnter={() => setIsFiftiesActive(true)} onMouseLeave={() => setIsFiftiesActive(false)} className={styles.fiftiesSection}></div>
         <div onMouseEnter={() => setIsSixtiesActive(true)} onMouseLeave={() => setIsSixtiesActive(false)} className={styles.sixtiesSection}></div>
@@ -49,7 +51,7 @@ const Home = () => {
                 {isRestActive &&
                 <>
                     <motion.div variants={decadeImageFade} initial="initial" animate="enter" exit="exit" className={styles.backgroundImage}><img src={mada}/></motion.div>
-                    <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit">70-98</motion.h1>
+                    <motion.h1 variants={decadeImageFade} initial="initial" animate="enter" exit="exit">'70-98</motion.h1>
                 </>}
             </AnimatePresence>
 

@@ -18,9 +18,10 @@ h1 {
     position: absolute;
     left: 5vmin;
     top: 5vmin;
+    letter-spacing: 2px;
     font-family: 'Supreme', sans-serif;
     color: ivory;
-    mix-blend-mode:luminosity;
+    mix-blend-mode: screen;
 }
 /* background image */
 .backgroundImage {
