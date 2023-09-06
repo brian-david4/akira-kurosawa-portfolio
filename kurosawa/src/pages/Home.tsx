@@ -15,13 +15,20 @@ const Home = () => {
     const [isSixtiesActive, setIsSixtiesActive] = useState(false);
     const [isRestActive, setIsRestActive] = useState(false);
 
+    const activeWrap = (key: number) => {
+        if(key === 0) return setIsFortiesActive(true); setIsFiftiesActive(false); setIsSixtiesActive(false); setIsRestActive(false);
+        if(key === 1) return setIsFortiesActive(false); setIsFiftiesActive(true); setIsSixtiesActive(false); setIsRestActive(false);
+        if(key === 2) return setIsFortiesActive(false); setIsFiftiesActive(false); setIsSixtiesActive(true); setIsRestActive(false);
+        if(key === 3) return setIsFortiesActive(false); setIsFiftiesActive(false); setIsSixtiesActive(false); setIsRestActive(true);
+    }
+
   return (
     <div className={styles.pageBg}>
         <Menu />
-        <div onMouseEnter={() => setIsFortiesActive(true)} onMouseLeave={() => setIsFortiesActive(false)} className={styles.fortiesSection}></div>
-        <div onMouseEnter={() => setIsFiftiesActive(true)} onMouseLeave={() => setIsFiftiesActive(false)} className={styles.fiftiesSection}></div>
-        <div onMouseEnter={() => setIsSixtiesActive(true)} onMouseLeave={() => setIsSixtiesActive(false)} className={styles.sixtiesSection}></div>
-        <div onMouseEnter={() => setIsRestActive(true)} onMouseLeave={() => setIsRestActive(false)} className={styles.restOfSection}></div>
+        <div onMouseEnter={() => activeWrap(0)} className={styles.fortiesSection}></div>
+        <div onMouseEnter={() => activeWrap(1)} className={styles.fiftiesSection}></div>
+        <div onMouseEnter={() => activeWrap(2)} className={styles.sixtiesSection}></div>
+        <div onMouseEnter={() => activeWrap(3)} className={styles.restOfSection}></div>
         
         <AnimatePresence mode="wait">
             {isFortiesActive &&

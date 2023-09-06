@@ -28,7 +28,7 @@
     backdrop-filter: blur(20px);
     box-shadow: none; 
     background-color: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
+    pointer-events: stroke;
 
     display: flex;
     justify-content: space-around;
@@ -40,4 +40,5 @@
     font-family: 'Supreme', sans-serif;
     mix-blend-mode: overlay;
     user-select: none;
+    cursor: pointer;
 }
