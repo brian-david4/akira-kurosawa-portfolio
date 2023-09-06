@@ -37,9 +37,13 @@
 }
 .navbarLink {
     text-decoration: none;
-    color: ivory;
+    color: rgba(255, 255, 255, 0.7);
     font-family: 'Supreme', sans-serif;
     font-size: 0.9rem;
     user-select: none;
     cursor: pointer;
+    transition: all 100ms ease-in;
+}
+.navbarLink:hover {
+    color: rgba(255, 255, 255, 1);
 }
