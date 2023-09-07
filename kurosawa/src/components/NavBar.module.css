@@ -14,7 +14,7 @@
     transition: all 300ms ease-out;
 }
 .burger {
-    width: 100%;
+    width: 0%;
     transition: all 300ms ease-out;
 }
 .burger::after, .burger::before{
@@ -30,11 +30,23 @@
 .menuBtn:hover {
     scale: 1.1;
 }
+.menuBtn:hover > .burger{
+    width: 100%;
+}
 .menuBtn:hover > .burger::after{
     transform: translate(0px, -5px);
 }
 .menuBtn:hover > .burger::before{
     transform: translate(0px, 5px);
+}
+[data-menu-active=true]{
+    width: 100% !important;
+}
+[data-menu-active=true]::before{
+    transform: rotate(45deg);
+}
+[data-menu-active=true]::after{
+    transform: rotate(-45deg);
 }
 .navbarWrapper{
     position: fixed;

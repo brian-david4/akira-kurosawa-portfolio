@@ -9,7 +9,7 @@ const Menu = () => {
   return (
     <>
     <div onClick={()=>setIsMenuActive(!isMenuActive)} className={styles.menuBtn}>
-      <div className={styles.burger}></div>
+      <div data-menu-active={isMenuActive} className={styles.burger}></div>
     </div>
     <AnimatePresence mode="wait">{isMenuActive && <NavBar />}</AnimatePresence>
     </>
