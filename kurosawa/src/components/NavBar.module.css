@@ -91,14 +91,25 @@
     color: rgba(255, 255, 255, 1);
 }
 /* navLink hover items */
-.early {
+.navLinkMenu {
     position: absolute;
     width: 81%;
     height: 40vh;
     bottom: 1.65vmin;
     border-radius: 22px;
-    background-color: rgb(26, 48, 70);
     z-index: -1;
     pointer-events: all;
     transform-origin: bottom;
+}
+#early {
+    background-color: var(--early);
+}
+#intl {
+    background-color: var(--intl);
+}
+#great {
+    background-color: var(--great);
+}
+#legacy {
+    background-color: var(--legacy);
 }

@@ -1,8 +1,8 @@
 :root {
-    --homeBg: #8DD3FF;
-    --ylwBg: #FFF88D;
-    --redBg: #D14041;
-    --prplBg: #BAC1FA;
+    --early: #8DD3FF;
+    --intl: #FFF88D;
+    --great: #D14041;
+    --legacy: #BAC1FA;
 }
 
 * {
