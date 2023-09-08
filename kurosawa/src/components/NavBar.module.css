@@ -68,13 +68,14 @@
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: none; 
-    background-color: rgba(255, 255, 255, 0.1);
-    pointer-events: stroke;
+    background-color: rgba(144, 218, 228, 0.1);
+    pointer-events: none;
     transform-origin: right;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 0;
 }
 .navbarLink {
     text-decoration: none;
@@ -83,8 +84,21 @@
     font-size: 0.9rem;
     user-select: none;
     cursor: pointer;
+    pointer-events: stroke;
     transition: all 100ms ease-in;
 }
 .navbarLink:hover {
     color: rgba(255, 255, 255, 1);
+}
+/* navLink hover items */
+.early {
+    position: absolute;
+    width: 81%;
+    height: 40vh;
+    bottom: 1.65vmin;
+    border-radius: 22px;
+    background-color: rgb(26, 48, 70);
+    z-index: -1;
+    pointer-events: all;
+    transform-origin: bottom;
 }
