@@ -4,10 +4,10 @@ import { decadeImageFade } from "./HomeAnim";
 import Menu from "../components/Menu";
 // images
 import styles from "./Home.module.css";
-import forty from "../../public/1940.mp4";
-import fifty from "../../public/1950.mp4";
-import rest from "../../public/restFilm.mp4";
-import sixty from "../../public/1960.mp4"
+import forty from "/1940.mp4";
+import fifty from "/1950.mp4";
+import rest from "/restFilm.mp4";
+import sixty from "/1960.mp4"
 import ran from "../images/ran1.webp";
 
 const Home = () => {

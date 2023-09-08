@@ -54,6 +54,9 @@ video {
 .fortyVideo, .fiftyVideo {
     scale: 1.5;
 }
-.sixtyVideo, .restVideo {
+.sixtyVideo {
+    scale: 1.4;
+}
+.restVideo {
     scale: 1.2;
 }

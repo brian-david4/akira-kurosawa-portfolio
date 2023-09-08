@@ -7,7 +7,7 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
-    background-color: blanchedalmond;
+    background-color: rgb(204, 212, 218);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,10 +43,10 @@
     width: 100% !important;
 }
 [data-menu-active=true]::before{
-    transform: rotate(45deg);
+    transform: rotate(45deg) !important;
 }
 [data-menu-active=true]::after{
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) !important;
 }
 .navbarWrapper{
     position: fixed;
