@@ -39,3 +39,20 @@ export const linkFade = {
         transition: {duration: 0.2, ease: [0.76, 0, 0.24, 1]}
     }
 }
+
+export const navLinkMenuAnim = {
+    initial: {
+        scaleY: 0,
+        scaleX: 0.5,
+    },
+    enter: {
+        scaleY: 1,
+        scaleX: 1,
+        transition: {duration: 0.6, ease: [0.76, 0, 0.24, 1]}
+    },
+    exit: {
+        scaleY: 0,
+        scaleX: 0,
+        transition: {duration: 0.3, ease: [0.76, 0, 0.24, 1]}
+    }
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./NavBar.module.css"
-import { linkFade, navbarScale } from "./NavBarAnim";
+import { linkFade, navLinkMenuAnim, navbarScale } from "./NavBarAnim";
 
 const NavBar = () => {
   const [earlyActive, setEarlyActive] = useState(false);
@@ -20,7 +20,7 @@ const NavBar = () => {
           <motion.div
             className={styles.early}
             onMouseLeave={()=>setEarlyActive(false)}
-            ></motion.div>}
+            variants={navLinkMenuAnim} initial="initial" animate="enter" exit="exit"></motion.div>}
         </AnimatePresence>
     </div>
     </>
