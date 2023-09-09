@@ -2,12 +2,17 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./NavBar.module.css"
 import { linkFade, navLinkMenuAnim, navbarScale } from "./NavBarAnim";
+import NavLinkMenu from "./NavLinkMenu";
 
 const NavBar = () => {
   const [earlyActive, setEarlyActive] = useState(false);
   const [intlActive, setIntlActive] = useState(false);
   const [greatActive, setGreatActive] = useState(false);
   const [legacyActive, setLegacyActive] = useState(false);
+
+  const inactiveWrap = (keyIdx: number) => {
+    if(keyIdx === 0) return setEarlyActive(false);
+  }
 
   return (
     <>
@@ -21,11 +26,7 @@ const NavBar = () => {
 
         {/* early works */}
         <AnimatePresence mode="wait">
-          {earlyActive && 
-          <motion.div
-            className={styles.navLinkMenu} id={styles.early} 
-            onMouseLeave={()=>setEarlyActive(false)}
-            variants={navLinkMenuAnim} initial="initial" animate="enter" exit="exit"></motion.div>}
+          {earlyActive && <NavLinkMenu keyIdx={0} InactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)} />}
         </AnimatePresence>
             {/* International recog */}
         <AnimatePresence mode="wait">

@@ -101,7 +101,7 @@
     pointer-events: all;
     transform-origin: bottom;
 }
-#early {
+[data-nav-link-menu-colour="0"] {
     background-color: var(--early);
 }
 #intl {
