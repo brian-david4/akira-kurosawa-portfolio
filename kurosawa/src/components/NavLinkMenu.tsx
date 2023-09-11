@@ -3,14 +3,14 @@ import { navLinkMenuAnim } from "./NavBarAnim";
 import styles from "./NavBar.module.css";
 
 interface NavLinkMenuProps{
-    InactiveWrap: (key: number) => void;
+    inactiveWrap: (key: number) => void;
     keyIdx: number;
 }
 
-const NavLinkMenu = ({ keyIdx, InactiveWrap }: NavLinkMenuProps) => {
+const NavLinkMenu = ({ keyIdx, inactiveWrap }: NavLinkMenuProps) => {
   return (
     <motion.div className={styles.navLinkMenu} data-nav-link-menu-colour={keyIdx} 
-    onMouseLeave={()=>InactiveWrap(keyIdx)}
+    onMouseLeave={()=>inactiveWrap(keyIdx)}
     variants={navLinkMenuAnim} initial="initial" animate="enter" exit="exit">
     </motion.div>
   )

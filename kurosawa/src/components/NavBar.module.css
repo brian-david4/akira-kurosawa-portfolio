@@ -104,12 +104,12 @@
 [data-nav-link-menu-colour="0"] {
     background-color: var(--early);
 }
-#intl {
+[data-nav-link-menu-colour="1"] {
     background-color: var(--intl);
 }
-#great {
+[data-nav-link-menu-colour="2"] {
     background-color: var(--great);
 }
-#legacy {
+[data-nav-link-menu-colour="3"] {
     background-color: var(--legacy);
 }

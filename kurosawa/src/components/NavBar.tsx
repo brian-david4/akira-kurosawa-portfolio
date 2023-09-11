@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./NavBar.module.css"
-import { linkFade, navLinkMenuAnim, navbarScale } from "./NavBarAnim";
+import { linkFade, navbarScale } from "./NavBarAnim";
 import NavLinkMenu from "./NavLinkMenu";
 
 const NavBar = () => {
@@ -12,6 +12,9 @@ const NavBar = () => {
 
   const inactiveWrap = (keyIdx: number) => {
     if(keyIdx === 0) return setEarlyActive(false);
+    if(keyIdx === 1) return setIntlActive(false);
+    if(keyIdx === 2) return setGreatActive(false);
+    if(keyIdx === 3) return setLegacyActive(false);
   }
 
   return (
@@ -26,31 +29,22 @@ const NavBar = () => {
 
         {/* early works */}
         <AnimatePresence mode="wait">
-          {earlyActive && <NavLinkMenu keyIdx={0} InactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)} />}
+          {earlyActive && <NavLinkMenu keyIdx={0} inactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)} />}
         </AnimatePresence>
-            {/* International recog */}
+            
+        {/* International recog */}
         <AnimatePresence mode="wait">
-          {intlActive && 
-          <motion.div
-            className={styles.navLinkMenu} id={styles.intl} 
-            onMouseLeave={()=>setIntlActive(false)}
-            variants={navLinkMenuAnim} initial="initial" animate="enter" exit="exit"></motion.div>}
+          {intlActive && <NavLinkMenu keyIdx={1} inactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)} />}
         </AnimatePresence>
-            {/* greatness */}
+            
+        {/* greatness */}
         <AnimatePresence mode="wait">
-          {greatActive && 
-          <motion.div
-            className={styles.navLinkMenu} id={styles.great} 
-            onMouseLeave={()=>setGreatActive(false)}
-            variants={navLinkMenuAnim} initial="initial" animate="enter" exit="exit"></motion.div>}
+          {greatActive && <NavLinkMenu keyIdx={2} inactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)}/>}
         </AnimatePresence>
-
+        
+        {/* Later Years */}
         <AnimatePresence mode="wait">
-          {legacyActive && 
-          <motion.div
-            className={styles.navLinkMenu} id={styles.legacy} 
-            onMouseLeave={()=>setLegacyActive(false)}
-            variants={navLinkMenuAnim} initial="initial" animate="enter" exit="exit"></motion.div>}
+          {legacyActive && <NavLinkMenu keyIdx={3} inactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)}/>}
         </AnimatePresence>
 
     </div>
