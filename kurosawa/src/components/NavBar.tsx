@@ -29,7 +29,22 @@ const NavBar = () => {
 
         {/* early works */}
         <AnimatePresence mode="wait">
-          {earlyActive && <NavLinkMenu keyIdx={0} inactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)} />}
+          {earlyActive && 
+          <NavLinkMenu keyIdx={0} inactiveWrap={(keyIdx)=>inactiveWrap(keyIdx)}>
+            <div className={styles.linkMenuInner}>
+              <div className={styles.filmography}>
+                <div className={styles.film}>Sanshiro Sugata</div>
+                <div className={styles.film}>The Most Beautiful</div>
+                <div className={styles.film}>Sanshiro Suagata Part II</div>
+                <div className={styles.film}>The Men Who Tread on the Tigers Tail</div>
+                <div className={styles.film}>No Regrets for Our Youth</div>
+                <div className={styles.film}>Those Who Make Tomorrow</div>
+                <div className={styles.film}>One Wonderful Sunday</div>
+                <div className={styles.film}>Drunken Angel</div>
+                <div className={styles.film}>Stray Dog</div>
+              </div>
+            </div>
+          </NavLinkMenu>}
         </AnimatePresence>
             
         {/* International recog */}
