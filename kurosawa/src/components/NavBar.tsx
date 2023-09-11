@@ -21,10 +21,10 @@ const NavBar = () => {
     <>
     <div className={styles.navbarWrapper}>
         <motion.div variants={navbarScale} initial="initial" animate="enter" exit="exit" className={styles.navbar}>
-            <motion.div onMouseEnter={()=>setEarlyActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>Early work's</motion.div>
-            <motion.div onMouseEnter={()=>setIntlActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>International Recognition</motion.div>
-            <motion.div onMouseEnter={()=>setGreatActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>Greatness</motion.div>
-            <motion.div onMouseEnter={()=>setLegacyActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>Later years</motion.div>
+            <motion.div onClick={()=> setEarlyActive(!earlyActive)} onMouseEnter={()=>setEarlyActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>Early work's</motion.div>
+            <motion.div onClick={()=> setIntlActive(!intlActive)} onMouseEnter={()=>setIntlActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>International Recognition</motion.div>
+            <motion.div onClick={()=> setGreatActive(!greatActive)} onMouseEnter={()=>setGreatActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>Greatness</motion.div>
+            <motion.div onClick={()=> setLegacyActive(!legacyActive)} onMouseEnter={()=>setLegacyActive(true)} variants={linkFade} initial="initial" animate="enter" exit="exit" className={styles.navbarLink}>Later years</motion.div>
         </motion.div>
 
         {/* early works */}
