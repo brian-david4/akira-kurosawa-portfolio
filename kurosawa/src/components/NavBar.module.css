@@ -127,10 +127,12 @@
 .filmography {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex; 
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
 }
 .film{
     font-size: 0.6rem;
+    font-family: 'Supreme', sans-serif;
+    font-weight: 500;
 }
