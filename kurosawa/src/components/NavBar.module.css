@@ -136,3 +136,10 @@
     font-family: 'Supreme', sans-serif;
     font-weight: 500;
 }
+/* navLinkImage */
+.navLinkImage {
+    position: relative;
+    bottom: 50vh;
+    width: 25vw;
+    height: auto;
+}
