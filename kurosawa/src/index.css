@@ -1,13 +1,18 @@
 :root {
-    --early: #8DD3FF;
-    --intl: #FFF88D;
-    --great: #D14041;
-    --legacy: #BAC1FA;
-    --menu-blue: rgb(204, 212, 218);
+  --early: #8dd3ff;
+  --intl: #fff88d;
+  --great: #d14041;
+  --legacy: #bac1fa;
+  --menu-blue: rgb(204, 212, 218);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--legacy);
+  color: rgb(25, 24, 24);
 }
