@@ -25,6 +25,8 @@ const Home = () => {
 
   return (
     <div className={styles.pageBg}>
+        <div className={styles.nameSignature}>Akira Kurosawa</div>
+
         <Menu />
         <div onMouseEnter={() => activeWrap(0)} className={styles.fortiesSection}></div>
         <div onMouseEnter={() => activeWrap(1)} className={styles.fiftiesSection}></div>
