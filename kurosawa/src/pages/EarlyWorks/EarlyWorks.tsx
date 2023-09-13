@@ -1,13 +1,14 @@
+import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import signature from "../../images/signature.webp";
 import styles from "./Early.module.css";
 
 const EarlyWorks = () => {
   return (
     <>
-      <div className={styles.nameTitle}>
+      <DecadePageHeader>
         <h1>Early</h1>
         <h1>Work's</h1>
-      </div>
+      </DecadePageHeader>
 
       <img
         className={styles.signature}

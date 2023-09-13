@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { decadeImageFade } from "./HomeAnim";
-import Menu from "../../components/Menu";
+import Menu from "../../components/Menu/Menu";
 // images
 import styles from "./Home.module.css";
 import forty from "/1940.mp4";

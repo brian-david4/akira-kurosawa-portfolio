@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { linkFade, navbarScale } from "./NavBarAnim";
-import early from "../images/straydog.webp";
-import intl from "../images/yojimbo.webp";
-import great from "../images/highlow.webp";
-import later from "../images/madadayo.webp";
+import early from "../../images/straydog.webp";
+import intl from "../../images/yojimbo.webp";
+import great from "../../images/highlow.webp";
+import later from "../../images/madadayo.webp";
 
 const NavBar = () => {
   const [earlyActive, setEarlyActive] = useState(false);
