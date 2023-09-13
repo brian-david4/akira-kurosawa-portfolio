@@ -3,6 +3,7 @@
   --intl: #fff88d;
   --great: #d14041;
   --legacy: #bac1fa;
+  --page-bg: rgb(245, 251, 255);
   --menu-blue: rgb(204, 212, 218);
 }
 
@@ -15,4 +16,8 @@
 ::selection {
   background: var(--legacy);
   color: rgb(25, 24, 24);
+}
+body {
+  background: var(--page-bg);
+  text-align: center;
 }

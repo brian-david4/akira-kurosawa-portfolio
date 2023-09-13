@@ -1,0 +1,24 @@
+.nameTitle {
+  position: relative;
+  top: 6vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blanchedalmond; */
+  font-family: "Supreme", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  gap: 1.5vmin;
+  letter-spacing: 1px;
+}
+
+.signature {
+  position: fixed;
+  height: 35px;
+  width: auto;
+  top: 70%;
+  left: -25px;
+  transform: rotate(95deg);
+}
