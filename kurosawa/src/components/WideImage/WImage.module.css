@@ -1,0 +1,9 @@
+.imgWide {
+  width: var(--i-wide);
+  height: auto;
+}
+.imgWide img {
+  width: 100%;
+  border-radius: 3px;
+  /* object-fit: cover; */
+}
