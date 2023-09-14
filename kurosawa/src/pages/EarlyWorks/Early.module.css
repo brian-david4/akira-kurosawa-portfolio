@@ -6,3 +6,13 @@
   left: -25px;
   transform: rotate(95deg);
 }
+
+.nameStyle {
+  position: relative;
+  left: 30%;
+  user-select: none;
+  font-family: "Melodrama", sans-serif;
+  color: var(--menu-blue);
+  font-weight: 100;
+  letter-spacing: 1px;
+}

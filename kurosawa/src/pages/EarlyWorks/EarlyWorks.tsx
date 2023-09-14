@@ -5,6 +5,10 @@ import styles from "./Early.module.css";
 const EarlyWorks = () => {
   return (
     <>
+      <div className={styles.nameStyle}>
+        <h5>Kurosawa</h5>
+      </div>
+
       <DecadePageHeader>
         <h1>Early</h1>
         <h1>Work's</h1>
