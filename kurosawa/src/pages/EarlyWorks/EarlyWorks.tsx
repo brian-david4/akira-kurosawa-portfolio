@@ -1,13 +1,12 @@
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
+import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import signature from "../../images/signature.webp";
 import styles from "./Early.module.css";
 
 const EarlyWorks = () => {
   return (
     <>
-      <div className={styles.nameStyle}>
-        <h5>Kurosawa</h5>
-      </div>
+      <KurosawaName />
 
       <DecadePageHeader>
         <h1>Early</h1>
