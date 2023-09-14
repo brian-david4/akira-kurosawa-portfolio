@@ -1,10 +1,16 @@
 :root {
+  /* colours */
   --early: #8dd3ff;
   --intl: #fff88d;
   --great: #d14041;
   --legacy: #bac1fa;
   --page-bg: rgb(245, 251, 255);
   --menu-blue: rgb(204, 212, 218);
+  /* image sizes */
+  --i-max: 100vw;
+  --i-wide: 80vw;
+  --i-two: 35vw;
+  --i-single: 20vw;
 }
 
 * {

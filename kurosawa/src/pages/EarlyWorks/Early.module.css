@@ -1,12 +1,3 @@
-.signature {
-  position: fixed;
-  height: 35px;
-  width: auto;
-  top: 70%;
-  left: -25px;
-  transform: rotate(95deg);
-}
-
 .nameStyle {
   position: relative;
   left: 30%;
