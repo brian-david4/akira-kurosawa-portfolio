@@ -9,7 +9,7 @@
 }
 .ltr {
   display: inline-block;
-  transition: all 100ms ease-in-out;
+  transition: all 50ms ease-in-out;
 }
 .nameStyle > span:hover {
   transform: translateY(10%);

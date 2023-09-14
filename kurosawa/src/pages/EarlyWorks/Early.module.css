@@ -1,9 +1,17 @@
-.nameStyle {
+.introSection {
   position: relative;
-  left: 30%;
-  user-select: none;
-  font-family: "Melodrama", sans-serif;
-  color: var(--menu-blue);
-  font-weight: 100;
-  letter-spacing: 1px;
+  top: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background: var(--early); */
+}
+.imgWide {
+  width: var(--i-wide);
+  height: auto;
+}
+.imgWide img {
+  width: 100%;
+  border-radius: 3px;
+  /* object-fit: cover; */
 }
