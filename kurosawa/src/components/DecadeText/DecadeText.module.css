@@ -1,0 +1,11 @@
+.decadeText {
+  position: relative;
+  width: var(--i-wide);
+  text-transform: lowercase;
+  /* background-color: var(--legacy); */
+}
+.decadeTextPara {
+  line-height: 1.5;
+  font-size: 28px;
+  font-family: "Neue Montral Book", sans-serif;
+}

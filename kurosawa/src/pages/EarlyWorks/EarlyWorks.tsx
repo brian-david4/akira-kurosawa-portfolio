@@ -1,4 +1,5 @@
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
+import DecadeText from "../../components/DecadeText/DecadeText";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
 import WideImage from "../../components/WideImage/WideImage";
@@ -17,13 +18,12 @@ const EarlyWorks = () => {
 
       <section className={styles.introSection}>
         <WideImage src={sugato00} alt="Sanshiro Sugata" />
-
-        <div className={styles.decadeText}>
+        <DecadeText>
           After working as an assistant director for 6 years Akira Kurosawa
-          debuted as a director with: <i>Sanshiro Sugata</i>
-          censors claimed the film did not keep with the japnese war times
-          standards - 18mins of the movies are still considered <em>lost</em>
-        </div>
+          debuted as a director with: <i>Sanshiro Sugata</i> censors claimed the
+          film did not keep with the japanese war times standards - 18mins of
+          the movies are still considered <b>lost</b>
+        </DecadeText>
       </section>
     </>
   );
