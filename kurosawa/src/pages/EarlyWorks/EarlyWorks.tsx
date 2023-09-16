@@ -17,6 +17,13 @@ const EarlyWorks = () => {
 
       <section className={styles.introSection}>
         <WideImage src={sugato00} alt="Sanshiro Sugata" />
+
+        <div className={styles.decadeText}>
+          After working as an assistant director for 6 years Akira Kurosawa
+          debuted as a director with: <i>Sanshiro Sugata</i>
+          censors claimed the film did not keep with the japnese war times
+          standards - 18mins of the movies are still considered <em>lost</em>
+        </div>
       </section>
     </>
   );
