@@ -1,0 +1,25 @@
+.menuBtn {
+  position: absolute;
+  top: 10px;
+  right: 5vmin;
+  width: 8vmin;
+  height: 2.5vmin;
+  background-color: var(--page-bg);
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  z-index: 20;
+}
+.menuBtnInner {
+  height: 100%;
+  width: 100%;
+  font-family: "Neue Montreal Book";
+  cursor: pointer;
+  /* background-color: var(--early); */
+}
+.menuBtnInner > span {
+  display: inline-block;
+}
+.menuBtnInner > span:hover {
+  transform: translateY(5%);
+}

@@ -1,3 +1,4 @@
+import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import DecadeText from "../../components/DecadeText/DecadeText";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
@@ -9,6 +10,7 @@ import styles from "./Early.module.css";
 const EarlyWorks = () => {
   return (
     <>
+      <DecadeNavBar />
       <KurosawaName />
       <Signature />
       <DecadePageHeader>
