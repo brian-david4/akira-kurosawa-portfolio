@@ -19,10 +19,20 @@ const EarlyWorks = () => {
       <section className={styles.introSection}>
         <WideImage src={sugato00} alt="Sanshiro Sugata" />
         <DecadeText>
-          After working as an assistant director for 6 years Akira Kurosawa
-          debuted as a director with: <i>Sanshiro Sugata</i> censors claimed the
-          film did not keep with the japanese war times standards - 18mins of
-          the movies are still considered <b>lost</b>
+          <span className="line">
+            After working as an assistant director for 6 years
+          </span>
+          <span className="line">
+            Akira Kurosawa debuted as a director with: <i>Sanshiro Sugata</i>
+          </span>
+          <span className="line">
+            censors claimed the film did not keep with the japanese
+          </span>
+          <span className="line">
+            {" "}
+            war times standards - 18mins of the movies are still considered{" "}
+            <b>lost</b>
+          </span>
         </DecadeText>
       </section>
     </>

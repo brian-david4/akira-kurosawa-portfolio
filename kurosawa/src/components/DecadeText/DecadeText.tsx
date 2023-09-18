@@ -1,3 +1,6 @@
+import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import styles from "./DecadeText.module.css";
 
 interface DecadeTextProps {
@@ -5,10 +8,27 @@ interface DecadeTextProps {
 }
 
 const DecadeText = ({ children }: DecadeTextProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.5, once: true });
+
+  useEffect(() => {
+    const tween = gsap.fromTo(
+      ".line",
+      { opacity: 0 },
+      { duration: 1.8, opacity: 1, stagger: { amount: 0.4 } }
+    );
+    console.log("Element is in view ", isInView);
+
+    return () => {
+      tween.revert();
+      console.log("cleanup");
+    };
+  }, [isInView]);
+
   return (
-    <div className={styles.decadeText}>
-      <p className={styles.decadeTextPara}>{children}</p>
-    </div>
+    <p ref={ref} className={styles.decadeText}>
+      {children}
+    </p>
   );
 };
 
