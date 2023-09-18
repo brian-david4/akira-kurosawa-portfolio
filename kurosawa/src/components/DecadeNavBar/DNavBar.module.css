@@ -19,7 +19,20 @@
 }
 .menuBtnInner > span {
   display: inline-block;
+  user-select: none;
 }
 .menuBtnInner > span:hover {
   transform: translateY(5%);
+}
+/* navMenu */
+.navMenu {
+  position: absolute;
+  height: 45vh;
+  aspect-ratio: 1;
+  z-index: 10;
+  right: calc(5vmin - 10px);
+  top: 5px;
+  background-color: var(--legacy);
+
+  border-radius: 20px;
 }
