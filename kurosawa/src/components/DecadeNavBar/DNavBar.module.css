@@ -4,35 +4,45 @@
   right: 5vmin;
   width: 8vmin;
   height: 2.5vmin;
-  background-color: var(--page-bg);
   border-radius: 20px;
   display: grid;
   place-items: center;
   z-index: 20;
+  overflow: hidden;
 }
-.menuBtnInner {
+.menuLabelContainer {
+  display: grid;
+  place-items: center;
+}
+
+.btnInnerMenu {
+  position: absolute;
   height: 100%;
   width: 100%;
   font-family: "Neue Montreal Book";
   cursor: pointer;
-  /* background-color: var(--early); */
+  user-select: none;
+  transition: all 350ms ease-in-out;
 }
-.menuBtnInner > span {
+.btnInnerMenu > span {
   display: inline-block;
   user-select: none;
 }
-.menuBtnInner > span:hover {
-  transform: translateY(5%);
+.btnInnerMenu:hover {
+  scale: 1.1;
 }
 /* navMenu */
 .navMenu {
-  position: absolute;
-  height: 45vh;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   aspect-ratio: 1;
   z-index: 10;
-  right: calc(5vmin - 10px);
-  top: 5px;
+  right: 0;
+  top: 0;
   background-color: var(--legacy);
 
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

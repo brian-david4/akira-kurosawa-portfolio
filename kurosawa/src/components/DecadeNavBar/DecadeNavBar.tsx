@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./DNavBar.module.css";
 import DecadeNavMenu from "./DecadeNavMenu";
+import { AnimatePresence } from "framer-motion";
 
 const DecadeNavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -11,14 +12,18 @@ const DecadeNavBar = () => {
         className={styles.menuBtn}
         onClick={() => setMenuActive(!menuActive)}
       >
-        <div className={styles.menuBtnInner}>
-          <span>m</span>
-          <span>e</span>
-          <span>n</span>
-          <span>u</span>
+        <div className={styles.menuLabelContainer}>
+          <div className={styles.btnInnerMenu} data-active-menu={menuActive}>
+            <span>m</span>
+            <span>e</span>
+            <span>n</span>
+            <span>u</span>
+          </div>
         </div>
       </div>
-      {menuActive && <DecadeNavMenu />}
+      <AnimatePresence mode="wait">
+        {menuActive && <DecadeNavMenu />}
+      </AnimatePresence>
     </>
   );
 };
