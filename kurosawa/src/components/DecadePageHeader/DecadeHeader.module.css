@@ -1,15 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellota:wght@300;400&display=swap");
+
 .nameTitle {
   position: relative;
-  top: 2.5vh;
+  top: 3vmin;
   left: 50%;
-  width: max-content;
+  width: min-content;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: blanchedalmond; */
-  font-family: "Supreme", sans-serif;
-  font-size: 3vmin;
+  font-family: "Bellota", cursive;
+  font-weight: 200;
+  font-size: 20px;
   font-weight: 100;
   gap: 1.5vmin;
   letter-spacing: 1px;

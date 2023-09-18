@@ -46,7 +46,7 @@ p {
   --menu-blue: rgb(204, 212, 218);
   /* image sizes */
   --i-max: 100vw;
-  --i-wide: 80vw;
+  --i-wide: 90vw;
   --i-two: 35vw;
   --i-single: 20vw;
 }
@@ -64,4 +64,8 @@ p {
 body {
   background: var(--page-bg);
   text-align: center;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
 }
