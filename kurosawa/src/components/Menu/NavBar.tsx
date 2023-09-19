@@ -12,7 +12,7 @@ const NavBar = () => {
   const [earlyActive, setEarlyActive] = useState(false);
   const [intlActive, setIntlActive] = useState(false);
   const [greatActive, setGreatActive] = useState(false);
-  const [laterActive, setLaterActive] = useState(false);
+  const [legacyActive, setLegacyActive] = useState(false);
 
   return (
     <>
@@ -58,15 +58,15 @@ const NavBar = () => {
             <Link to="/greatness">Greatness</Link>
           </motion.div>
           <motion.div
-            onMouseEnter={() => setLaterActive(true)}
-            onMouseLeave={() => setLaterActive(false)}
+            onMouseEnter={() => setLegacyActive(true)}
+            onMouseLeave={() => setLegacyActive(false)}
             variants={linkFade}
             initial="initial"
             animate="enter"
             exit="exit"
             className={styles.navbarLink}
           >
-            <Link to="/later">Later Years</Link>
+            <Link to="/legacy">Legacy</Link>
           </motion.div>
         </motion.div>
 
@@ -94,7 +94,7 @@ const NavBar = () => {
             alt="High and Low"
           />
         )}
-        {laterActive && (
+        {legacyActive && (
           <img
             id={styles.later}
             className={styles.navLinkImage}
