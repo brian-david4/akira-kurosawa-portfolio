@@ -1,3 +1,4 @@
+import Card from "../../components/Card/Card";
 import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import DecadeText from "../../components/DecadeText/DecadeText";
@@ -36,6 +37,12 @@ const EarlyWorks = () => {
             <b>lost</b>
           </span>
         </DecadeText>
+
+        <Card src={sugato00} alt="sadasd">
+          sanshiro sugata
+        </Card>
+
+        <div>somehing extra fro scroll</div>
       </section>
     </>
   );

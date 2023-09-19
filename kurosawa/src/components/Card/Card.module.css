@@ -1,0 +1,20 @@
+.card {
+  width: var(--i-large);
+  height: 70vh;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 3px;
+}
+.image {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+.caption {
+  position: relative;
+  top: 4%;
+  font-family: "Neue Montreal Book";
+  text-transform: lowercase;
+}

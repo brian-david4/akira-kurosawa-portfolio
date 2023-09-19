@@ -44,9 +44,11 @@ p {
   --legacy: #bac1fa;
   --page-bg: rgb(255, 254, 245);
   --menu-blue: rgb(204, 212, 218);
+  --card-bg: #ffe9c4;
   /* image sizes */
   --i-max: 100vw;
   --i-wide: 90vw;
+  --i-large: 600px;
   --i-two: 35vw;
   --i-single: 20vw;
 }
