@@ -1,6 +1,7 @@
 .nameStyle {
   position: relative;
-  right: 1vw;
+  left: 43%;
+  width: fit-content;
   user-select: none;
   font-size: 20px;
   font-family: "Melodrama", sans-serif;
@@ -8,11 +9,9 @@
   font-weight: 100;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .ltr {
   display: inline-block;
   transition: all 50ms ease-in-out;
-}
-.nameStyle > span:hover {
-  transform: translateY(10%);
 }
