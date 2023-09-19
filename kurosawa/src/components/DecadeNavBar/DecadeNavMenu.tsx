@@ -6,11 +6,11 @@ import { menuBtn } from "./Anims";
 
 const DecadeNavMenu = () => {
   const links = [
-    "Home",
-    "Early Works",
-    "International Success",
-    "Greatness",
-    "Legacy",
+    { title: "Home", url: "/" },
+    { title: "Early Works", url: "/early" },
+    { title: "International Success", url: "/international" },
+    { title: "Greatness", url: "/greatness" },
+    { title: "Legacy", url: "/legacy" },
   ];
 
   useEffect(() => {
@@ -43,8 +43,8 @@ const DecadeNavMenu = () => {
         {links.map((link, index) => (
           <div key={index} className={styles.linkWrapper}>
             <div className={`${styles.link} linkDiv`}>
-              <motion.a href="/" className="link">
-                {link}
+              <motion.a href={link.url} className="link">
+                {link.title}
               </motion.a>
             </div>
           </div>
