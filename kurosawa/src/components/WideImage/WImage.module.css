@@ -1,11 +1,12 @@
 .imgWide {
   position: relative;
   width: var(--i-wide);
-  height: max-content;
+  height: fit-content;
   background-color: var(--legacy);
   display: grid;
   place-items: center;
   /* overflow: hidden; */
+  transition: all 250ms ease-in-out;
 }
 .imgWide img {
   width: 100%;

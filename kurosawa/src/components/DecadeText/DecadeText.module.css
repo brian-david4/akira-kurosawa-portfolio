@@ -1,8 +1,11 @@
+.textWrapper {
+  height: fit-content;
+  width: var(--i-wide);
+}
 .decadeText {
   position: relative;
   width: var(--i-wide);
-  height: min-content;
-  /* background-color: var(--legacy); */
+  height: fit-content;
   transition: all 1s ease-in;
   text-transform: lowercase;
   font-family: "Neue Montreal Book", sans-serif;

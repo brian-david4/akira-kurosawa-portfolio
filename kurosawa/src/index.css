@@ -71,3 +71,6 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+.line {
+  display: inline-block !important;
+}
