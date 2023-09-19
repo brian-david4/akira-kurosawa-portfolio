@@ -1,12 +1,15 @@
-import Card from "../../components/Card/Card";
+// import Card from "../../components/Card/Card";
 import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import DecadeText from "../../components/DecadeText/DecadeText";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
 import WideImage from "../../components/WideImage/WideImage";
-import sugato00 from "../../images/Early-Works/sugato_00.webp";
 import styles from "./Early.module.css";
+
+import sugata00 from "../../images/Early-Works/sugato_00.webp";
+import sugata01 from "../../images/Early-Works/sugato_01.webp";
+import TwoImage from "../../components/TwoImage/TwoImage";
 
 const EarlyWorks = () => {
   return (
@@ -20,7 +23,7 @@ const EarlyWorks = () => {
       </DecadePageHeader>
 
       <section className={styles.introSection}>
-        <WideImage src={sugato00} alt="Sanshiro Sugata" />
+        <WideImage src={sugata00} alt="Sanshiro Sugata" />
         <DecadeText>
           <span className="line">
             After working as an assistant director for 6 years
@@ -38,9 +41,7 @@ const EarlyWorks = () => {
           </span>
         </DecadeText>
 
-        <Card src={sugato00} alt="sadasd">
-          sanshiro sugata
-        </Card>
+        <TwoImage src1={sugata00} src2={sugata01} alt1="a" alt2="b" />
 
         <div>somehing extra fro scroll</div>
       </section>

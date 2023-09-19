@@ -1,0 +1,21 @@
+.twoImageContainer {
+  height: 80vh;
+  width: 100%;
+  background-color: var(--legacy);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+.singleImgWrapper {
+  height: 80%;
+  width: var(--i-two);
+}
+.singleImgWrapper > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
