@@ -8,7 +8,7 @@ interface DecadeTextProps {
 }
 
 const DecadeText = ({ children }: DecadeTextProps) => {
-  const [ref, isInView] = useInView({ threshold: 1 });
+  const [ref, isInView] = useInView({ threshold: 1, triggerOnce: true });
 
   useEffect(() => {
     let tl = gsap.timeline();

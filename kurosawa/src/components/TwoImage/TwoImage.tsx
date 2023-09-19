@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import styles from "./TImage.module.css";
 
 interface TwoImageProps {
@@ -9,14 +10,23 @@ interface TwoImageProps {
 }
 
 const TwoImage = ({ src1, alt1, src2, alt2 }: TwoImageProps) => {
+  const [ref, isInView] = useInView({ triggerOnce: true, threshold: 0.5 });
   return (
-    <div className={styles.twoImageContainer}>
+    <div ref={ref} className={styles.twoImageContainer}>
       <div className={`${styles.singleImgWrapper} singleImgWrapper`}>
-        <img src={src1} alt={alt1} />
+        <img
+          className={isInView ? styles.imgOpacity : ""}
+          src={src1}
+          alt={alt1}
+        />
       </div>
 
       <div className={`${styles.singleImgWrapper} singleImgWrapper`}>
-        <img src={src2} alt={alt2} />
+        <img
+          className={isInView ? styles.imgOpacity : ""}
+          src={src2}
+          alt={alt2}
+        />
       </div>
     </div>
   );
