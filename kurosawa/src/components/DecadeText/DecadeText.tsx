@@ -17,11 +17,9 @@ const DecadeText = ({ children }: DecadeTextProps) => {
       { opacity: 0 },
       { duration: 1.8, opacity: 1, stagger: { amount: 0.4 } }
     );
-    console.log("Element is in view ", isInView);
 
     return () => {
       tween.revert();
-      console.log("cleanup");
     };
   }, [isInView]);
 

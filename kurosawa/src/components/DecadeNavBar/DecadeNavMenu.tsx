@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { useEffect } from "react";
 import styles from "./DNavBar.module.css";
 import { menuBtn } from "./Anims";
-import { Link } from "react-router-dom";
 
 const DecadeNavMenu = () => {
   const links = [
@@ -9,8 +10,26 @@ const DecadeNavMenu = () => {
     "Early Works",
     "International Success",
     "Greatness",
-    "Later Years",
+    "Legacy",
   ];
+
+  useEffect(() => {
+    const linkAnim = gsap.fromTo(
+      ".linkDiv",
+      { yPercent: 100 },
+      {
+        duration: 0.9,
+        yPercent: 0,
+        ease: "power2.inOut",
+        delay: 0.7,
+        stagger: { amount: 0.2 },
+      }
+    );
+
+    return () => {
+      linkAnim.revert();
+    };
+  }, []);
 
   return (
     <motion.div
@@ -22,8 +41,12 @@ const DecadeNavMenu = () => {
     >
       <div className={styles.linksContainer}>
         {links.map((link, index) => (
-          <div className={styles.link} key={index}>
-            <Link to="/">{link}</Link>
+          <div key={index} className={styles.linkWrapper}>
+            <div className={`${styles.link} linkDiv`}>
+              <motion.a href="/" className="link">
+                {link}
+              </motion.a>
+            </div>
           </div>
         ))}
       </div>
