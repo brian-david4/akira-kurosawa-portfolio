@@ -13,15 +13,8 @@ export const menuBtn = {
 };
 
 export const navLink = {
-  initial: {
-    y: "100%",
-  },
-  enter: {
-    y: 0,
-    transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1], delay: 1.5 },
-  },
   exit: {
-    y: "-100%",
-    transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1], delay: 1.5 },
+    y: "-110%",
+    transition: { duration: 1.1, ease: [0.76, 0, 0.24, 1] },
   },
 };

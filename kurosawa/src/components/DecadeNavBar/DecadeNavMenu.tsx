@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import styles from "./DNavBar.module.css";
-import { menuBtn } from "./Anims";
+import { menuBtn, navLink } from "./Anims";
 
 const DecadeNavMenu = () => {
   const links = [
@@ -18,7 +18,7 @@ const DecadeNavMenu = () => {
       ".linkDiv",
       { yPercent: 100 },
       {
-        duration: 0.9,
+        duration: 1.3,
         yPercent: 0,
         ease: "power2.inOut",
         delay: 0.7,
@@ -42,11 +42,15 @@ const DecadeNavMenu = () => {
       <div className={styles.linksContainer}>
         {links.map((link, index) => (
           <div key={index} className={styles.linkWrapper}>
-            <div className={`${styles.link} linkDiv`}>
-              <motion.a href={link.url} className="link">
+            <motion.div
+              variants={navLink}
+              exit="exit"
+              className={`${styles.link} linkDiv`}
+            >
+              <a href={link.url} className="link">
                 {link.title}
-              </motion.a>
-            </div>
+              </a>
+            </motion.div>
           </div>
         ))}
       </div>
