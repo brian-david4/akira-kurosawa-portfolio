@@ -1,7 +1,6 @@
 .twoImageContainer {
   height: 80vh;
   width: 100%;
-  background-color: var(--legacy);
 
   display: flex;
   justify-content: center;

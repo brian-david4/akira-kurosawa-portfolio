@@ -1,5 +1,6 @@
 // import Card from "../../components/Card/Card";
 import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
+import TwoImage from "../../components/TwoImage/TwoImage";
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import DecadeText from "../../components/DecadeText/DecadeText";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
@@ -9,7 +10,7 @@ import styles from "./Early.module.css";
 
 import sugata00 from "../../images/Early-Works/sugato_00.webp";
 import sugata01 from "../../images/Early-Works/sugato_01.webp";
-import TwoImage from "../../components/TwoImage/TwoImage";
+import sugata02 from "../../images/Early-Works/sugata_02.webp";
 
 const EarlyWorks = () => {
   return (
@@ -41,7 +42,12 @@ const EarlyWorks = () => {
           </span>
         </DecadeText>
 
-        <TwoImage src1={sugata00} src2={sugata01} alt1="a" alt2="b" />
+        <TwoImage
+          src1={sugata02}
+          src2={sugata01}
+          alt1="Sanshiro Sugata - group of women looking sad"
+          alt2="Sanshiro Sugata - Sanshiro stands in the hills"
+        />
 
         <div>somehing extra fro scroll</div>
       </section>
