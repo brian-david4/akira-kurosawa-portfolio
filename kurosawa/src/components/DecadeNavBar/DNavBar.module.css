@@ -1,7 +1,7 @@
 @import url("https://api.fontshare.com/v2/css?f[]=khand@600&display=swap");
 
 .menuBtn {
-  position: absolute;
+  position: sticky;
   top: 10px;
   right: 5vmin;
   width: 8vmin;

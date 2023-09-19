@@ -1,7 +1,6 @@
 .nameStyle {
   position: relative;
-  left: 43%;
-  width: fit-content;
+  width: 100%;
   user-select: none;
   font-size: 20px;
   font-family: "Melodrama", sans-serif;
@@ -10,6 +9,9 @@
   letter-spacing: 1px;
   margin-bottom: 10px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ltr {
   display: inline-block;
