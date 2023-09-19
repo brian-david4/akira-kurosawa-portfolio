@@ -84,7 +84,8 @@
 .navbarLink > a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Supreme", sans-serif;
+  font-family: "Neue Montreal Book", sans-serif;
+  letter-spacing: 0.5px;
   font-size: 0.9rem;
   font-weight: 100;
   user-select: none;
