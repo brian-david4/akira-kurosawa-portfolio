@@ -24,7 +24,7 @@ const Home = () => {
       setIntroPlay(false);
     }, 11000);
     return () => clearTimeout(timer);
-  });
+  }, []);
 
   const activeWrap = (key: number) => {
     if (key === 0)
