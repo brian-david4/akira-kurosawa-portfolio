@@ -13,6 +13,7 @@
   z-index: 20;
 }
 .name {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,12 +24,30 @@
   user-select: none;
 }
 .nameEn {
-  font-family: "Neue Montreal Book";
+  font-family: "Melodrama", serif;
   position: absolute;
 }
 .nameJp {
   font-family: "Sawarabi Mincho", serif;
   position: absolute;
+  opacity: 0;
+}
+.imgPortrait {
+  position: absolute;
+  z-index: 21;
+  height: 55vh;
+  width: 400px;
+  border-radius: 3px;
+  background-color: ivory;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+}
+.imgPortrait > img {
+  height: 99.5%;
+  width: 99.5%;
+  border-radius: 3px;
+  filter: brightness(0.9);
 }
 @media (max-width: 960px) {
   .nameEn {
