@@ -26,7 +26,11 @@ const HomeIntro = () => {
       className={styles.block}
     >
       <div className={`${styles.imgPortrait} imgPortrait`}>
-        <img src={portrait} alt="Headshot of Akira Kurosawa" />
+        <img
+          draggable="false"
+          src={portrait}
+          alt="Headshot of Akira Kurosawa"
+        />
       </div>
       <div className={styles.name}>
         <div className={`${styles.nameEn} nameEn`}>
