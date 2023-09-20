@@ -1,6 +1,4 @@
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import { gsap } from "gsap";
+import { motion } from "framer-motion";
 import styles from "./DecadeText.module.css";
 
 interface DecadeTextProps {
@@ -8,25 +6,16 @@ interface DecadeTextProps {
 }
 
 const DecadeText = ({ children }: DecadeTextProps) => {
-  const [ref, isInView] = useInView({ threshold: 1, triggerOnce: true });
-
-  useEffect(() => {
-    let tl = gsap.timeline();
-    tl.fromTo(
-      ".line",
-      { opacity: 0 },
-      { duration: 1.8, opacity: 1, stagger: { amount: 0.4 } }
-    );
-    console.log("inView", isInView);
-    return () => {
-      tl.revert();
-    };
-  }, [isInView]);
-
   return (
-    <div ref={ref} className={styles.textWrapper}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 1.8, ease: [0.5, 1, 0.89, 1] }}
+      className={styles.textWrapper}
+    >
       <p className={styles.decadeText}>{children}</p>
-    </div>
+    </motion.div>
   );
 };
 

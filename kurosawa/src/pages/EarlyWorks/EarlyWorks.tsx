@@ -28,20 +28,10 @@ const EarlyWorks = () => {
       <section className={styles.introSection}>
         <WideImage src={sugata00} alt="Sanshiro Sugata" />
         <DecadeText>
-          <span className="line">
-            After working as an assistant director for 6 years
-          </span>
-          <span className="line">
-            Akira Kurosawa debuted as a director with: <i>Sanshiro Sugata</i>
-          </span>
-          <span className="line">
-            censors claimed the film did not keep with the japanese
-          </span>
-          <span className="line">
-            {" "}
-            war times standards - 18mins of the movies are still considered{" "}
-            <b>lost</b>
-          </span>
+          After working as an assistant director for 6 years Akira Kurosawa
+          debuted as a director with: <i>Sanshiro Sugata</i>
+          censors claimed the film did not keep with the japanese war times
+          standards - 18mins of the movies are still considered <b>lost</b>
         </DecadeText>
 
         <TwoImage
@@ -50,6 +40,12 @@ const EarlyWorks = () => {
           alt1="Sanshiro Sugata - group of women looking sad"
           alt2="Sanshiro Sugata - Sanshiro stands in the hills"
         />
+
+        <DecadeText>
+          kurosawa's first post war film was <i>no regrets for our youth</i>-
+          this theme would carry on even through to his later works. it received
+          mixed reviews from critics for its political themes or something idk.
+        </DecadeText>
 
         <Card src={noRegretBts} alt="Akira Kurosawa directing a scene">
           behind the scenes: <i>no regrets for our youth</i>
