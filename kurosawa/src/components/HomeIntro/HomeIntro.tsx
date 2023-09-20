@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import styles from "./HomeIntro.module.css";
 import portrait from "../../images/Kurosawa-Akira-portrait.webp";
+import { blockAnim } from "./Anim";
 
 const HomeIntro = () => {
   useEffect(() => {
@@ -18,7 +19,12 @@ const HomeIntro = () => {
   }, []);
 
   return (
-    <motion.div className={styles.block}>
+    <motion.div
+      variants={blockAnim}
+      initial="initial"
+      exit="exit"
+      className={styles.block}
+    >
       <div className={`${styles.imgPortrait} imgPortrait`}>
         <img src={portrait} alt="Headshot of Akira Kurosawa" />
       </div>

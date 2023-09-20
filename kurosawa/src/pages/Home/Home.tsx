@@ -59,7 +59,9 @@ const Home = () => {
 
   return (
     <>
-      {isIntroPlaying && <HomeIntro />}
+      <AnimatePresence mode="wait">
+        {isIntroPlaying && <HomeIntro />}
+      </AnimatePresence>
 
       <div className={styles.pageBg}>
         <div className={styles.nameSignature}>Akira Kurosawa</div>
