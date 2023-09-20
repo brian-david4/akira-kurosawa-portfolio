@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { decadeImageFade } from "./HomeAnim";
 import Menu from "../../components/Menu/Menu";
@@ -16,6 +16,15 @@ const Home = () => {
   const [isFiftiesActive, setIsFiftiesActive] = useState(false);
   const [isSixtiesActive, setIsSixtiesActive] = useState(false);
   const [isRestActive, setIsRestActive] = useState(false);
+
+  const [isIntroPlaying, setIntroPlay] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIntroPlay(false);
+    }, 11000);
+    return () => clearTimeout(timer);
+  });
 
   const activeWrap = (key: number) => {
     if (key === 0)
@@ -50,7 +59,7 @@ const Home = () => {
 
   return (
     <>
-      <HomeIntro />
+      {isIntroPlaying && <HomeIntro />}
 
       <div className={styles.pageBg}>
         <div className={styles.nameSignature}>Akira Kurosawa</div>
