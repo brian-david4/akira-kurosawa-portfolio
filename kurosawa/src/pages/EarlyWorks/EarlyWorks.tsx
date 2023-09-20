@@ -6,11 +6,13 @@ import DecadeText from "../../components/DecadeText/DecadeText";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
 import WideImage from "../../components/WideImage/WideImage";
+import Card from "../../components/Card/Card";
 import styles from "./Early.module.css";
 
 import sugata00 from "../../images/Early-Works/sugato_00.webp";
 import sugata01 from "../../images/Early-Works/sugato_01.webp";
 import sugata02 from "../../images/Early-Works/sugata_02.webp";
+import noRegretBts from "../../images/Early-Works/no-regrets-bts.webp";
 
 const EarlyWorks = () => {
   return (
@@ -48,6 +50,10 @@ const EarlyWorks = () => {
           alt1="Sanshiro Sugata - group of women looking sad"
           alt2="Sanshiro Sugata - Sanshiro stands in the hills"
         />
+
+        <Card src={noRegretBts} alt="Akira Kurosawa directing a scene">
+          behind the scenes: <i>no regrets for our youth</i>
+        </Card>
 
         <div>somehing extra fro scroll</div>
       </section>
