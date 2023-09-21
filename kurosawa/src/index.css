@@ -68,6 +68,7 @@ body {
   background: var(--page-bg);
   text-align: center;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 ::-webkit-scrollbar {
   display: none;

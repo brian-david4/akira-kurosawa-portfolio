@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
+import MaxImage from "../../components/MaxImage/MaxImage";
 import Card from "../../components/Card/Card";
 import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 import TwoImage from "../../components/TwoImage/TwoImage";
@@ -10,13 +12,13 @@ import Signature from "../../components/Signature/Signature";
 import WideImage from "../../components/WideImage/WideImage";
 
 import styles from "./Early.module.css";
+import { sectionOne } from "./Anim";
 
 import sugata00 from "../../images/Early-Works/sugato_00.webp";
 import sugata01 from "../../images/Early-Works/sugato_01.webp";
 import sugata02 from "../../images/Early-Works/sugata_02.webp";
 import noRegretBts from "../../images/Early-Works/no-regrets-bts.webp";
-import { motion } from "framer-motion";
-import { sectionOne } from "./Anim";
+import noRegrets01 from "../../images/Early-Works/no-regrets01.webp";
 
 const EarlyWorks = () => {
   const [loading, setLoading] = useState(true);
@@ -74,6 +76,11 @@ const EarlyWorks = () => {
           <Card src={noRegretBts} alt="Akira Kurosawa directing a scene">
             behind the scenes: <i>no regrets for our youth</i>
           </Card>
+
+          <MaxImage
+            src={noRegrets01}
+            alt="Shot of a group - No Regrets For Our Youth"
+          />
 
           <div>somehing extra fro scroll</div>
         </motion.section>
