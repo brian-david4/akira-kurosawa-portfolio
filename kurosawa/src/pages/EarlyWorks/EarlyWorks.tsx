@@ -30,7 +30,7 @@ const EarlyWorks = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -97,6 +97,14 @@ const EarlyWorks = () => {
             src={strayDog}
             alt="Stray Dog - A japanese noire film - two police officers lurk in the shadows"
           />
+
+          <DecadeText>
+            kurosawa emerged from the 40's a success. though not always with the
+            critics 'cuz of his themes etc. but he was most often a hit with the
+            audience. so the studios continued funding his future projects, also
+            kurosawa would get backed by contemporaries such as Yasujiro Ozu,
+            which put more pressure on the studios.
+          </DecadeText>
 
           <MaxImage
             src={noRegrets}
