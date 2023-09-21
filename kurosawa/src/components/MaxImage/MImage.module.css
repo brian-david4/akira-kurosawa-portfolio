@@ -1,0 +1,13 @@
+.imageMax {
+  width: var(--i-max);
+  height: fit-content;
+  background-color: var(--legacy);
+}
+.imageMax > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imgOpacity {
+  opacity: 1 !important;
+}
