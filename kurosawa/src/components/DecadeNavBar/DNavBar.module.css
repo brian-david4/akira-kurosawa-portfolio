@@ -42,7 +42,7 @@
   z-index: 10;
   right: 0;
   top: 0;
-  background-color: var(--legacy);
+  background-color: var(--menu-prpl);
 
   display: flex;
   justify-content: center;
