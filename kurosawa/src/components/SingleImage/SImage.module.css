@@ -1,0 +1,17 @@
+.singleImage {
+  position: relative;
+  width: var(--i-single);
+  height: fit-content;
+  border-radius: 3px;
+}
+.singleImage > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+
+  transition: all 1.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.imgOpacity {
+  opacity: 1;
+}

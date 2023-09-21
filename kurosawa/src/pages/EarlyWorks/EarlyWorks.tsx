@@ -20,9 +20,11 @@ import sugata02 from "../../images/Early-Works/sugata_02.webp";
 import noRegretBts from "../../images/Early-Works/no-regrets-bts.webp";
 import noRegrets01 from "../../images/Early-Works/no-regrets01.webp";
 import noRegrets from "../../images/Early-Works/no-regrets.webp";
-import lastDuel01 from "../../images/Early-Works/last-duel01.webp";
+import quietDuel01 from "../../images/Early-Works/last-duel01.webp";
 import noRegrets02 from "../../images/Early-Works/No_Regrets_02.webp";
 import strayDog from "../../images/Early-Works/stray-dog00.webp";
+import quietDuel from "../../images/Early-Works/quiet_duel00.webp";
+import SingleImage from "../../components/SingleImage/SingleImage";
 
 const EarlyWorks = () => {
   const [loading, setLoading] = useState(true);
@@ -88,9 +90,9 @@ const EarlyWorks = () => {
 
           <TwoImage
             src1={noRegrets02}
-            src2={lastDuel01}
+            src2={quietDuel01}
             alt1="No Regrets For Our Youth - a woman looks at a man in  a suit"
-            alt2="The Last Duel - A doctor tired after a shift"
+            alt2="A Quiet Duel - A doctor tired after a shift"
           />
 
           <WideImage
@@ -105,6 +107,11 @@ const EarlyWorks = () => {
             kurosawa would get backed by contemporaries such as Yasujiro Ozu,
             which put more pressure on the studios.
           </DecadeText>
+
+          <SingleImage
+            src={quietDuel}
+            alt="A Quiet Duel - Two doctors on a cigarette break"
+          />
 
           <MaxImage
             src={noRegrets}
