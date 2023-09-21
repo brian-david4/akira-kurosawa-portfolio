@@ -19,6 +19,10 @@ import sugata01 from "../../images/Early-Works/sugato_01.webp";
 import sugata02 from "../../images/Early-Works/sugata_02.webp";
 import noRegretBts from "../../images/Early-Works/no-regrets-bts.webp";
 import noRegrets01 from "../../images/Early-Works/no-regrets01.webp";
+import noRegrets from "../../images/Early-Works/no-regrets.webp";
+import lastDuel01 from "../../images/Early-Works/last-duel01.webp";
+import noRegrets02 from "../../images/Early-Works/No_Regrets_02.webp";
+import strayDog from "../../images/Early-Works/stray-dog00.webp";
 
 const EarlyWorks = () => {
   const [loading, setLoading] = useState(true);
@@ -80,6 +84,23 @@ const EarlyWorks = () => {
           <MaxImage
             src={noRegrets01}
             alt="Shot of a group - No Regrets For Our Youth"
+          />
+
+          <TwoImage
+            src1={noRegrets02}
+            src2={lastDuel01}
+            alt1="No Regrets For Our Youth - a woman looks at a man in  a suit"
+            alt2="The Last Duel - A doctor tired after a shift"
+          />
+
+          <WideImage
+            src={strayDog}
+            alt="Stray Dog - A japanese noire film - two police officers lurk in the shadows"
+          />
+
+          <MaxImage
+            src={noRegrets}
+            alt="No Regrets For Our Youth - Man lays in a filed with a lady beside him"
           />
 
           <div>somehing extra fro scroll</div>
