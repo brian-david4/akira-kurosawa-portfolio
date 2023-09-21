@@ -1,0 +1,12 @@
+.navImage {
+  position: absolute;
+  width: 35vw;
+  aspect-ratio: 1;
+  border-radius: 15px;
+}
+.navImage > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
