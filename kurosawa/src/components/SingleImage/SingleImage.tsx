@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import styles from "./SImage.module.css";
 
 interface SingleImageProps {
@@ -6,9 +7,10 @@ interface SingleImageProps {
 }
 
 const SingleImage = ({ src, alt }: SingleImageProps) => {
+  const [ref, isInView] = useInView({ triggerOnce: true, threshold: 0.5 });
   return (
-    <div className={styles.singleImage}>
-      <img src={src} alt={alt} />
+    <div ref={ref} className={styles.singleImage}>
+      <img className={isInView ? styles.imgOpacity : ""} src={src} alt={alt} />
     </div>
   );
 };

@@ -3,6 +3,7 @@
   width: var(--i-single);
   height: fit-content;
   border-radius: 3px;
+  background-color: var(--legacy);
 }
 .singleImage > img {
   height: 100%;
