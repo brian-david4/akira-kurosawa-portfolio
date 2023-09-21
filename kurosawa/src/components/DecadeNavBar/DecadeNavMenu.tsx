@@ -1,10 +1,31 @@
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./DNavBar.module.css";
 import { menuBtn, navLink } from "./Anims";
 
 const DecadeNavMenu = () => {
+  const [home, setHome] = useState(false);
+  const [early, setEarly] = useState(false);
+  const [international, setInternational] = useState(false);
+  const [great, setGreat] = useState(false);
+  const [legacy, setLegacy] = useState(false);
+
+  const activeWrap = (key: number) => {
+    if (key === 0) return setHome(true);
+    if (key === 1) return setEarly(true);
+    if (key === 2) return setInternational(true);
+    if (key === 3) return setGreat(true);
+    if (key === 4) return setLegacy(true);
+  };
+  const inactiveWrap = (key: number) => {
+    if (key === 0) return setHome(false);
+    if (key === 1) return setEarly(false);
+    if (key === 2) return setInternational(false);
+    if (key === 3) return setGreat(false);
+    if (key === 4) return setLegacy(false);
+  };
+
   const links = [
     { title: "Home", url: "/" },
     { title: "Early Works", url: "/early" },
@@ -46,6 +67,8 @@ const DecadeNavMenu = () => {
               variants={navLink}
               exit="exit"
               className={`${styles.link} linkDiv`}
+              onMouseEnter={() => activeWrap(index)}
+              onMouseLeave={() => inactiveWrap(index)}
             >
               <a href={link.url} className="link">
                 {link.title}
@@ -54,6 +77,11 @@ const DecadeNavMenu = () => {
           </div>
         ))}
       </div>
+      {home && <div>home</div>}
+      {early && <div>early</div>}
+      {international && <div>international</div>}
+      {great && <div>greatness</div>}
+      {legacy && <div>Legacy</div>}
     </motion.div>
   );
 };
