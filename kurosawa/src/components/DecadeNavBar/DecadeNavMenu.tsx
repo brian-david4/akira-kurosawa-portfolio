@@ -7,6 +7,9 @@ import NavImage from "../NavImage/NavImage";
 
 import strayDog from "../../images/NavVideo/strayDogCrop.mp4";
 import sevenSam from "../../images/NavVideo/sevenSam.mp4";
+import highnLow from "../../images/NavVideo/highLow.mp4";
+import dreamVid from "../../images/NavVideo/dreamVid.mp4";
+import waterWhl from "../../images/NavVideo/waterWhl.mp4";
 
 const DecadeNavMenu = () => {
   const [home, setHome] = useState(false);
@@ -81,17 +84,26 @@ const DecadeNavMenu = () => {
           </div>
         ))}
       </div>
+
       <AnimatePresence mode="wait">
-        {home && <NavImage src={strayDog} />}
+        {home && <NavImage src={waterWhl} />}
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-        {early && <NavImage src={sevenSam} />}
+        {early && <NavImage src={strayDog} />}
       </AnimatePresence>
 
-      {international && <div>international</div>}
-      {great && <div>greatness</div>}
-      {legacy && <div>Legacy</div>}
+      <AnimatePresence mode="wait">
+        {international && <NavImage src={sevenSam} />}
+      </AnimatePresence>
+
+      <AnimatePresence mode="wait">
+        {great && <NavImage src={highnLow} />}
+      </AnimatePresence>
+
+      <AnimatePresence mode="wait">
+        {legacy && <NavImage src={dreamVid} />}
+      </AnimatePresence>
     </motion.div>
   );
 };
