@@ -6,6 +6,7 @@ import { menuBtn, navLink } from "./Anims";
 import NavImage from "../NavImage/NavImage";
 
 import strayDog from "../../images/NavVideo/strayDogCrop.mp4";
+import sevenSam from "../../images/NavVideo/sevenSam.mp4";
 
 const DecadeNavMenu = () => {
   const [home, setHome] = useState(false);
@@ -83,7 +84,11 @@ const DecadeNavMenu = () => {
       <AnimatePresence mode="wait">
         {home && <NavImage src={strayDog} />}
       </AnimatePresence>
-      {early && <div>early</div>}
+
+      <AnimatePresence mode="wait">
+        {early && <NavImage src={sevenSam} />}
+      </AnimatePresence>
+
       {international && <div>international</div>}
       {great && <div>greatness</div>}
       {legacy && <div>Legacy</div>}

@@ -8,15 +8,14 @@ interface NavImageProps {
 }
 
 const NavImage = ({ src }: NavImageProps) => {
-  const { x, y } = useMousePosition();
+  const { y } = useMousePosition();
   const size = 250;
 
   return (
     <motion.div
       variants={navVideo}
-      initial={{ opacity: 0 }}
+      initial={{ top: "50%" }}
       animate={{
-        opacity: 1,
         // left: `${x + "15%"}px`,
         top: `${y - size}px`,
       }}
@@ -24,7 +23,18 @@ const NavImage = ({ src }: NavImageProps) => {
       transition={{ type: "tween", ease: "backOut" }}
       className={styles.navImage}
     >
-      <motion.video autoPlay loop={false} draggable={false} playsInline>
+      <motion.video
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+        }}
+        muted
+        autoPlay
+        loop={false}
+        draggable={false}
+        playsInline
+      >
         <source src={src} />
       </motion.video>
     </motion.div>
