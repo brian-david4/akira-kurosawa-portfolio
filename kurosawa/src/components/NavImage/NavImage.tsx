@@ -2,13 +2,14 @@ import styles from "./NavImage.module.css";
 
 interface NavImageProps {
   src: string;
-  alt: string;
 }
 
-const NavImage = ({ src, alt }: NavImageProps) => {
+const NavImage = ({ src }: NavImageProps) => {
   return (
     <div className={styles.navImage}>
-      <img src={src} alt={alt} />
+      <video autoPlay loop={false} draggable={false} playsInline>
+        <source src={src} />
+      </video>
     </div>
   );
 };

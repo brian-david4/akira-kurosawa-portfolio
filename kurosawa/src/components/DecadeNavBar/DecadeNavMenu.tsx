@@ -3,6 +3,9 @@ import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 import styles from "./DNavBar.module.css";
 import { menuBtn, navLink } from "./Anims";
+import NavImage from "../NavImage/NavImage";
+
+import strayDog from "../../images/NavVideo/strayDogCrop.mp4";
 
 const DecadeNavMenu = () => {
   const [home, setHome] = useState(false);
@@ -77,7 +80,7 @@ const DecadeNavMenu = () => {
           </div>
         ))}
       </div>
-      {home && <div>home</div>}
+      {home && <NavImage src={strayDog} />}
       {early && <div>early</div>}
       {international && <div>international</div>}
       {great && <div>greatness</div>}
