@@ -10,6 +10,7 @@ import DecadeText from "../../components/DecadeText/DecadeText";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
 import WideImage from "../../components/WideImage/WideImage";
+import PageFooter from "../../components/PageFooter/PageFooter";
 
 import styles from "./Early.module.css";
 import { sectionOne } from "./Anim";
@@ -119,6 +120,8 @@ const EarlyWorks = () => {
           />
 
           <div>somehing extra fro scroll</div>
+
+          <PageFooter goTo="/international" />
         </motion.section>
       )}
     </>
