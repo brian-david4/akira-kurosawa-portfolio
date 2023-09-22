@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 import styles from "./DNavBar.module.css";
@@ -80,7 +80,9 @@ const DecadeNavMenu = () => {
           </div>
         ))}
       </div>
-      {home && <NavImage src={strayDog} />}
+      <AnimatePresence mode="wait">
+        {home && <NavImage src={strayDog} />}
+      </AnimatePresence>
       {early && <div>early</div>}
       {international && <div>international</div>}
       {great && <div>greatness</div>}

@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import styles from "./NavImage.module.css";
+import { navVideo } from "./Anims";
 
 interface NavImageProps {
   src: string;
@@ -6,11 +8,17 @@ interface NavImageProps {
 
 const NavImage = ({ src }: NavImageProps) => {
   return (
-    <div className={styles.navImage}>
-      <video autoPlay loop={false} draggable={false} playsInline>
+    <motion.div
+      variants={navVideo}
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      className={styles.navImage}
+    >
+      <motion.video autoPlay loop={false} draggable={false} playsInline>
         <source src={src} />
-      </video>
-    </div>
+      </motion.video>
+    </motion.div>
   );
 };
 
