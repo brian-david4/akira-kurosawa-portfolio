@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { decadeImageFade } from "./HomeAnim";
 import Menu from "../../components/Menu/Menu";
+import HomeIntro from "../../components/HomeIntro/HomeIntro";
 // images
 import styles from "./Home.module.css";
 import forty from "/1940.mp4";
@@ -9,7 +10,6 @@ import fifty from "/1950.mp4";
 import rest from "/restFilm.mp4";
 import sixty from "/1960.mp4";
 import ran from "../../images/ran1.webp";
-import HomeIntro from "../../components/HomeIntro/HomeIntro";
 
 const Home = () => {
   const [isFortiesActive, setIsFortiesActive] = useState(false);
@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntroPlay(false);
-    }, 11000);
+    }, 10500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -86,13 +86,7 @@ const Home = () => {
         <AnimatePresence mode="wait">
           {isFortiesActive && (
             <>
-              <motion.div
-                variants={decadeImageFade}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                className={styles.backgroundImage}
-              >
+              <motion.div className={styles.backgroundImage}>
                 <video
                   className={styles.fortyVideo}
                   autoPlay
@@ -176,13 +170,7 @@ const Home = () => {
         <AnimatePresence mode="wait">
           {isRestActive && (
             <>
-              <motion.div
-                variants={decadeImageFade}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                className={styles.backgroundImage}
-              >
+              <motion.div className={styles.backgroundImage}>
                 <video
                   className={styles.restVideo}
                   autoPlay
@@ -213,13 +201,7 @@ const Home = () => {
             !isSixtiesActive &&
             !isRestActive && (
               <>
-                <motion.div
-                  variants={decadeImageFade}
-                  initial="initial"
-                  animate="enter"
-                  exit="exit"
-                  className={styles.backgroundImage}
-                >
+                <motion.div className={styles.backgroundImage}>
                   <img src={ran} />
                 </motion.div>
                 <motion.h1
