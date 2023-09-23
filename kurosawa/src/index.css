@@ -47,6 +47,7 @@ p {
   --menu-blue: rgb(204, 212, 218);
   --card-bg: #ffe9c4;
   --intro-black: #1c1b18;
+  --loading-bg: #1f3238;
   /* image sizes */
   --i-max: 100vw;
   --i-wide: 90vw;
