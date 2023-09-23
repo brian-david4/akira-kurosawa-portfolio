@@ -40,7 +40,7 @@ const EarlyWorks = () => {
 
   return (
     <>
-      {loading && <Loading title="Early Work's" />}
+      <Loading title="Early Work's" />
       {!loading && (
         <>
           <DecadeNavBar />

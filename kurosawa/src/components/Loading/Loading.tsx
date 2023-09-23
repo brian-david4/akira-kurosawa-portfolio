@@ -7,7 +7,7 @@ interface LoadingProps {
 const Loading = ({ title }: LoadingProps) => {
   return (
     <div className={styles.loadPage}>
-      <h1>{`the ${title} page is loading`}</h1>
+      <h1>{`the ${title} page is loading..`}</h1>
     </div>
   );
 };

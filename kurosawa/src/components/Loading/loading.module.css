@@ -4,6 +4,7 @@
   width: 100vw;
   left: 0;
   top: 0;
+  z-index: 20;
 
   display: flex;
   justify-content: center;
@@ -11,7 +12,30 @@
   color: ivory;
 
   background-color: var(--loading-bg);
-}
-.loadingPage > h1 {
+
   text-transform: uppercase;
+  font-family: "Neue Montreal Book";
+
+  transition: font-size 1s ease-in-out;
+}
+
+@media (max-width: 1920px) {
+  .loadPage {
+    font-size: 75px;
+  }
+}
+@media (max-width: 1280px) {
+  .loadPage {
+    font-size: 50px;
+  }
+}
+@media (mxa-width: 960px) {
+  .loadPage {
+    font-size: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .loadPage {
+    font-size: 35px;
+  }
 }
