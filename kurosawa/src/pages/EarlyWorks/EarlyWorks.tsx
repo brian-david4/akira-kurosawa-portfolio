@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import MaxImage from "../../components/MaxImage/MaxImage";
 import Card from "../../components/Card/Card";
@@ -34,13 +34,15 @@ const EarlyWorks = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      <Loading title="Early Work's" />
+      <AnimatePresence mode="wait">
+        {loading && <Loading title="Early Work's" />}
+      </AnimatePresence>
       {!loading && (
         <>
           <DecadeNavBar />
