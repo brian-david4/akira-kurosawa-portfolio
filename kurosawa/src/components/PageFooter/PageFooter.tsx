@@ -3,12 +3,19 @@ import styles from "./footer.module.css";
 
 interface PageFooterProps {
   goTo: string;
+  nextTitle?: string;
 }
 
-const PageFooter = ({ goTo }: PageFooterProps) => {
+const PageFooter = ({ goTo, nextTitle }: PageFooterProps) => {
   return (
     <div className={styles.footerMain}>
-      <Link to={goTo}>International Success</Link>
+      <div className={styles.footerInner}>
+        <div className={styles.titleNext}>
+          <Link className={styles.link} to={goTo}>
+            {nextTitle}
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
