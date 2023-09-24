@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
 import arrow from "../../images/Arrow.svg";
+import highnLow from "../../images/highlow.webp";
 
 interface PageFooterProps {
   goTo: string;
@@ -15,6 +16,10 @@ const PageFooter = ({ goTo, nextTitle }: PageFooterProps) => {
     <div className={styles.footerMain}>
       <div className={styles.footerInner}>
         <div className={styles.titleNext}>
+          <div className={styles.imgTopWrapper}>
+            <img className={rightArrow ? styles.imgHover : ""} src={highnLow} />
+          </div>
+
           <div className={styles.imgWrapper}>
             <img
               className={rightArrow ? styles.imgPos : ""}
@@ -22,6 +27,7 @@ const PageFooter = ({ goTo, nextTitle }: PageFooterProps) => {
               alt="arrow pointing right"
             />
           </div>
+
           <Link
             onMouseEnter={() => setRightArrow(true)}
             onMouseLeave={() => setRightArrow(false)}
@@ -30,6 +36,10 @@ const PageFooter = ({ goTo, nextTitle }: PageFooterProps) => {
           >
             {nextTitle}
           </Link>
+
+          <div className={styles.imgBottWrapper}>
+            <img className={rightArrow ? styles.imgHover : ""} src={highnLow} />
+          </div>
         </div>
       </div>
     </div>
