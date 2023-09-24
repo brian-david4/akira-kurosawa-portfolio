@@ -20,8 +20,27 @@
   position: relative;
   left: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2vh;
+}
+.imgWrapper {
+  /* background-color: cadetblue; */
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+  padding-bottom: 1vh;
+}
+.imgWrapper > img {
+  position: relative;
+  transform: translateY(-150%) rotate(-180deg);
+  scale: 2;
+
+  transition: all 600ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+.imgPos {
+  transform: translateY(0) !important;
 }
 .link {
   text-decoration: none;
