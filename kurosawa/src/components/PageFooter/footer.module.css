@@ -74,3 +74,20 @@
 .imgOpacityLeft {
   opacity: 1 !important;
 }
+/* arrow */
+.arrow {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+.arrow > img {
+  scale: 5;
+  transform: rotate(90deg) translate(-50%, -50%);
+  transition: transform 500ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+[data-arrow-left="true"] {
+  transform: rotate(180deg) !important;
+}
+[data-arrow-right="true"] {
+  transform: rotate(0) !important;
+}

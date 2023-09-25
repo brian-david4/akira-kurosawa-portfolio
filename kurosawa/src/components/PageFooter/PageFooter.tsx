@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
 import useMousePosition from "../../hooks/useMousePosition";
-// import arrow from "../../images/Arrow.svg";
+import arrow from "../../images/Arrow.svg";
 import highnLow from "../../images/highlow.webp";
 
 interface PageFooterProps {
@@ -40,6 +40,15 @@ const PageFooter = ({
           src={highnLow}
         />
       </motion.div>
+
+      {/* arrow */}
+      <div className={styles.arrow}>
+        <img
+          src={arrow}
+          data-arrow-left={leftArrow}
+          data-arrow-right={rightArrow}
+        />
+      </div>
       {/* linkLeft */}
       <div className={styles.linkWrapperLeft}>
         <Link
