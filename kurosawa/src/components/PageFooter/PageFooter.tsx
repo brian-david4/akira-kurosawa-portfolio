@@ -30,25 +30,7 @@ const PageFooter = ({
   return (
     <div ref={footerRef} className={styles.footerMain}>
       {/* Left Side */}
-      <motion.div
-        animate={{ left: `calc(${x}px - ${size}vh)` }}
-        transition={{ type: "tween", ease: "backOut" }}
-        className={styles.imgTopWrapper}
-      >
-        <img
-          className={leftArrow ? styles.imgOpacityLeft : ""}
-          src={highnLow}
-        />
-      </motion.div>
 
-      {/* arrow */}
-      <div className={styles.arrow}>
-        <img
-          src={arrow}
-          data-arrow-left={leftArrow}
-          data-arrow-right={rightArrow}
-        />
-      </div>
       {/* linkLeft */}
       <div className={styles.linkWrapperLeft}>
         <Link
@@ -67,22 +49,22 @@ const PageFooter = ({
         className={styles.imgBottWrapper}
       >
         <img
+          draggable={false}
           className={leftArrow ? styles.imgOpacityLeft : ""}
           src={highnLow}
         />
       </motion.div>
 
-      {/* Right Side */}
-      <motion.div
-        animate={{ left: `calc(${x}px - ${size}vh)` }}
-        transition={{ type: "tween", ease: "backOut" }}
-        className={styles.imgTopWrapper}
-      >
+      {/* arrow */}
+      <div className={styles.arrow}>
         <img
-          className={rightArrow ? styles.imgOpacityRight : ""}
-          src={highnLow}
+          draggable={false}
+          src={arrow}
+          data-arrow-left={leftArrow}
+          data-arrow-right={rightArrow}
         />
-      </motion.div>
+      </div>
+      {/* Right Side */}
 
       <div className={styles.linkWrapperRight}>
         <Link
@@ -101,6 +83,7 @@ const PageFooter = ({
         className={styles.imgBottWrapper}
       >
         <img
+          draggable={false}
           className={rightArrow ? styles.imgOpacityRight : ""}
           style={{ transitionDelay: "0.2s" }}
           src={highnLow}
