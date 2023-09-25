@@ -16,16 +16,19 @@
   top: 50vh;
   /* background-color: cadetblue; */
 }
-.link {
+.link,
+.linkLeft {
   text-decoration: none;
   color: var(--intro-black);
   font-family: "Neue Montreal Book", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
-.link:hover::after {
+.link:hover::after,
+.linkLeft:hover::after {
   transform: scaleX(1);
 }
-.link::after {
+.link::after,
+.linkLeft::after {
   position: relative;
   display: block;
   margin: auto;
@@ -35,8 +38,13 @@
   width: 100%;
 
   transform: scaleX(0);
-  transform-origin: left;
   transition: transform 550ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+.link::after {
+  transform-origin: left;
+}
+.linkLeft::after {
+  transform-origin: right;
 }
 /* hover iamges */
 .imgTopWrapper,

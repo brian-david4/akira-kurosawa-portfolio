@@ -45,7 +45,7 @@ const PageFooter = ({
         <Link
           onMouseEnter={() => setLeftArrow(true)}
           onMouseLeave={() => setLeftArrow(false)}
-          className={styles.link}
+          className={styles.linkLeft}
           to={goToPrevious}
         >
           {previousTitle}
