@@ -125,7 +125,12 @@ const EarlyWorks = () => {
 
           <div>somehing extra fro scroll</div>
 
-          <PageFooter goTo="/international" nextTitle="international success" />
+          <PageFooter
+            goToNext="/international"
+            nextTitle="international success"
+            goToPrevious="/"
+            previousTitle="home"
+          />
         </motion.section>
       )}
     </>

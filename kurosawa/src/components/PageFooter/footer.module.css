@@ -4,9 +4,15 @@
   width: 100%;
   background-color: var(--legacy);
 }
-.linkWrapper {
+.linkWrapperRight {
   position: absolute;
   right: 5vw;
+  top: 50vh;
+  /* background-color: cadetblue; */
+}
+.linkWrapperLeft {
+  position: absolute;
+  left: 5vw;
   top: 50vh;
   /* background-color: cadetblue; */
 }
@@ -54,6 +60,9 @@
 .imgBottWrapper {
   bottom: 8vh;
 }
-.imgOpacity {
+.imgOpacityRight {
+  opacity: 1 !important;
+}
+.imgOpacityLeft {
   opacity: 1 !important;
 }
