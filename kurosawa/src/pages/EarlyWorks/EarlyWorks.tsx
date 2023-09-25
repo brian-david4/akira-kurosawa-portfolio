@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
 
 import MaxImage from "../../components/MaxImage/MaxImage";
@@ -30,6 +31,7 @@ import Loading from "../../components/Loading/Loading";
 
 const EarlyWorks = () => {
   const [loading, setLoading] = useState(true);
+  const [footerRef, isInView] = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -47,7 +49,7 @@ const EarlyWorks = () => {
         <>
           <DecadeNavBar />
           <KurosawaName />
-          <Signature />
+          <Signature isInView={isInView} />
           <DecadePageHeader>
             <h1>Early</h1>
             <h1>Work's</h1>
@@ -126,6 +128,7 @@ const EarlyWorks = () => {
           <div>somehing extra fro scroll</div>
 
           <PageFooter
+            footerRef={footerRef}
             goToNext="/international"
             nextTitle="international success"
             goToPrevious="/"

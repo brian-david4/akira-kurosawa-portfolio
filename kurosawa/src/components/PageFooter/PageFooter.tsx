@@ -11,6 +11,7 @@ interface PageFooterProps {
   goToNext: string;
   nextTitle: string;
   previousTitle: string;
+  footerRef: any;
 }
 
 const PageFooter = ({
@@ -18,6 +19,7 @@ const PageFooter = ({
   goToPrevious,
   nextTitle,
   previousTitle,
+  footerRef,
 }: PageFooterProps) => {
   const { x } = useMousePosition();
   const size = 10;
@@ -26,7 +28,7 @@ const PageFooter = ({
   const [leftArrow, setLeftArrow] = useState(false);
 
   return (
-    <div className={styles.footerMain}>
+    <div ref={footerRef} className={styles.footerMain}>
       {/* Left Side */}
       <motion.div
         animate={{ left: `calc(${x}px - ${size}vh)` }}

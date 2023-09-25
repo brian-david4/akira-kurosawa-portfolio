@@ -6,4 +6,9 @@
   top: 70%;
   left: -25px;
   transform: rotate(95deg);
+
+  transition: opacity 500ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+.signatureOpacity {
+  opacity: 0 !important;
 }

@@ -1,10 +1,16 @@
 import styles from "./Signature.module.css";
 import signature from "../../images/signature.webp";
 
-const Signature = () => {
+interface SignatureProps {
+  isInView: boolean;
+}
+
+const Signature = ({ isInView }: SignatureProps) => {
   return (
     <img
-      className={styles.signature}
+      className={`${styles.signature} ${
+        isInView ? styles.signatureOpacity : ""
+      }`}
       src={signature}
       alt="Akira Kurosawa's signature"
       draggable="false"
