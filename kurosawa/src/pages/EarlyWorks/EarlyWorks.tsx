@@ -15,7 +15,7 @@ import PageFooter from "../../components/PageFooter/PageFooter";
 
 import styles from "./Early.module.css";
 import { sectionOne } from "./Anim";
-
+// main images
 import sugata00 from "../../images/Early-Works/sugato_00.webp";
 import sugata01 from "../../images/Early-Works/sugato_01.webp";
 import sugata02 from "../../images/Early-Works/sugata_02.webp";
@@ -28,6 +28,9 @@ import strayDog from "../../images/Early-Works/stray-dog00.webp";
 import quietDuel from "../../images/Early-Works/quiet_duel00.webp";
 import SingleImage from "../../components/SingleImage/SingleImage";
 import Loading from "../../components/Loading/Loading";
+// images for footer
+import ran1 from "../../images/ran1.webp";
+import yojimbo from "../../images/yojimbo.webp";
 
 const EarlyWorks = () => {
   const [loading, setLoading] = useState(true);
@@ -133,6 +136,8 @@ const EarlyWorks = () => {
             nextTitle="international success"
             goToPrevious="/"
             previousTitle="home"
+            srcNext={yojimbo}
+            srcPrevious={ran1}
           />
         </motion.section>
       )}

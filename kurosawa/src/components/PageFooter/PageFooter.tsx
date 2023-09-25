@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
 import useMousePosition from "../../hooks/useMousePosition";
 import arrow from "../../images/Arrow.svg";
-import highnLow from "../../images/highlow.webp";
 
 interface PageFooterProps {
   goToPrevious: string;
@@ -12,6 +11,8 @@ interface PageFooterProps {
   nextTitle: string;
   previousTitle: string;
   footerRef: any;
+  srcNext: string;
+  srcPrevious: string;
 }
 
 const PageFooter = ({
@@ -19,6 +20,8 @@ const PageFooter = ({
   goToPrevious,
   nextTitle,
   previousTitle,
+  srcNext,
+  srcPrevious,
   footerRef,
 }: PageFooterProps) => {
   const { x } = useMousePosition();
@@ -51,7 +54,7 @@ const PageFooter = ({
         <img
           draggable={false}
           className={leftArrow ? styles.imgOpacityLeft : ""}
-          src={highnLow}
+          src={srcPrevious}
         />
       </motion.div>
 
@@ -86,7 +89,7 @@ const PageFooter = ({
           draggable={false}
           className={rightArrow ? styles.imgOpacityRight : ""}
           style={{ transitionDelay: "0.2s" }}
-          src={highnLow}
+          src={srcNext}
         />
       </motion.div>
     </div>
