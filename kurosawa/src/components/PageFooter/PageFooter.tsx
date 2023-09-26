@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "../Marquee/Marquee";
@@ -14,6 +14,7 @@ interface PageFooterProps {
   footerRef: any;
   srcNext: string;
   srcPrevious: string;
+  isFooterInView: boolean;
 }
 
 const PageFooter = ({
@@ -24,6 +25,7 @@ const PageFooter = ({
   srcNext,
   srcPrevious,
   footerRef,
+  isFooterInView,
 }: PageFooterProps) => {
   const { x } = useMousePosition();
   const size = 10;
@@ -61,9 +63,19 @@ const PageFooter = ({
 
       {/* marquee */}
 
-      <div className={styles.marqueePosition}>
-        <Marquee />
-      </div>
+      <AnimatePresence mode="wait">
+        {isFooterInView && (
+          <motion.div
+            initial={{ opacity: 0, y: "5%" }}
+            animate={{ opacity: 1, y: "0%" }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+            className={styles.marqueePosition}
+          >
+            <Marquee />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* arrow */}
       <div className={styles.arrow}>

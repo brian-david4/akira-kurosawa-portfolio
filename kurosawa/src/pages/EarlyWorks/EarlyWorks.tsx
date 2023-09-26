@@ -138,6 +138,7 @@ const EarlyWorks = () => {
             previousTitle="home"
             srcNext={yojimbo}
             srcPrevious={ran1}
+            isFooterInView={isInView}
           />
         </motion.section>
       )}
