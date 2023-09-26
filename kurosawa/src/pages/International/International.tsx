@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
+import Loading from "../../components/Loading/Loading";
 
 const International = () => {
   const [loading, setLoading] = useState(true);
@@ -15,6 +16,7 @@ const International = () => {
   });
   return (
     <>
+      {loading && <Loading title="international success" />}
       {!loading && (
         <>
           <KurosawaName />
