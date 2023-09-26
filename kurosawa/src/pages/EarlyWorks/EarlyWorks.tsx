@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import MaxImage from "../../components/MaxImage/MaxImage";
 import Card from "../../components/Card/Card";
@@ -13,8 +13,6 @@ import Signature from "../../components/Signature/Signature";
 import WideImage from "../../components/WideImage/WideImage";
 import PageFooter from "../../components/PageFooter/PageFooter";
 
-import styles from "./Early.module.css";
-import { sectionOne } from "./Anim";
 // main images
 import sugata00 from "../../images/Early-Works/sugato_00.webp";
 import sugata01 from "../../images/Early-Works/sugato_01.webp";
@@ -31,6 +29,7 @@ import Loading from "../../components/Loading/Loading";
 // images for footer
 import ran1 from "../../images/ran1.webp";
 import yojimbo from "../../images/yojimbo.webp";
+import PageSection from "../../components/PageSection/PageSection";
 
 const EarlyWorks = () => {
   const [loading, setLoading] = useState(true);
@@ -61,12 +60,7 @@ const EarlyWorks = () => {
       )}
 
       {!loading && (
-        <motion.section
-          variants={sectionOne}
-          initial="initial"
-          animate="enter"
-          className={styles.introSection}
-        >
+        <PageSection>
           <WideImage src={sugata00} alt="Sanshiro Sugata" />
           <DecadeText>
             After working as an assistant director for 6 years Akira Kurosawa
@@ -140,7 +134,7 @@ const EarlyWorks = () => {
             srcPrevious={ran1}
             isFooterInView={isInView}
           />
-        </motion.section>
+        </PageSection>
       )}
     </>
   );
