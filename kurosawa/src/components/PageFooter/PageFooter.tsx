@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Marquee from "../Marquee/Marquee";
 import styles from "./footer.module.css";
 import useMousePosition from "../../hooks/useMousePosition";
-import arrow from "../../images/Arrow.svg";
 
 interface PageFooterProps {
   goToPrevious: string;
@@ -77,15 +76,6 @@ const PageFooter = ({
         )}
       </AnimatePresence>
 
-      {/* arrow */}
-      <div className={styles.arrow}>
-        <img
-          draggable={false}
-          src={arrow}
-          data-arrow-left={leftArrow}
-          data-arrow-right={rightArrow}
-        />
-      </div>
       {/* Right Side */}
 
       <div className={styles.linkWrapperRight}>
