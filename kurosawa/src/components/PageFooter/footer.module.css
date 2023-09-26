@@ -90,3 +90,10 @@
   transform: rotate(0) !important;
   opacity: 1 !important;
 }
+.marqueePosition {
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  height: fit-content;
+  width: fit-content;
+}

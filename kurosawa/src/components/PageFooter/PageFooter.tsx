@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Marquee from "../Marquee/Marquee";
 import styles from "./footer.module.css";
 import useMousePosition from "../../hooks/useMousePosition";
 import arrow from "../../images/Arrow.svg";
@@ -57,6 +58,12 @@ const PageFooter = ({
           src={srcPrevious}
         />
       </motion.div>
+
+      {/* marquee */}
+
+      <div className={styles.marqueePosition}>
+        <Marquee />
+      </div>
 
       {/* arrow */}
       <div className={styles.arrow}>
