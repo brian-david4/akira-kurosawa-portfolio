@@ -1,8 +1,10 @@
+import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
+import Loading from "../../components/Loading/Loading";
 
 const Legacy = () => {
   const [loading, setLoading] = useState(true);
@@ -17,6 +19,10 @@ const Legacy = () => {
 
   return (
     <>
+      <AnimatePresence mode="wait">
+        {loading && <Loading title="legacy" />}
+      </AnimatePresence>
+
       {!loading && (
         <>
           <KurosawaName />
