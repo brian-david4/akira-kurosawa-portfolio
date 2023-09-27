@@ -108,14 +108,13 @@ const International = () => {
             alt="Throne of Blood - the king, peppered with arrows, lies on the ground. his soldiers stand around him"
           />
 
+          <SingleImage
+            src={ikiru02}
+            alt="Ikiru - A man in a suit and winter coat walks over a bridge with the sky behind him"
+          />
           <MaxImage
             src={samurai01}
             alt="Seven Samurai - the villagers gather around the samurai who lead them"
-          />
-
-          <WideImage
-            src={ikiru02}
-            alt="Ikiru - A man in a suit and winter coat walks over a bridge with the sky behind him"
           />
         </PageSection>
       )}
