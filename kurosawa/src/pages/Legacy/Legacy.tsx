@@ -5,6 +5,7 @@ import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
 import Signature from "../../components/Signature/Signature";
 import Loading from "../../components/Loading/Loading";
+import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 
 const Legacy = () => {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ const Legacy = () => {
 
       {!loading && (
         <>
+          <DecadeNavBar />
           <KurosawaName />
           <Signature isInView={false} />
           <DecadePageHeader>
