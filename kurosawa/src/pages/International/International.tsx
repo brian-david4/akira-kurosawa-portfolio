@@ -1,5 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
 import KurosawaName from "../../components/KurosawaName/KurosawaName";
@@ -11,6 +12,8 @@ import MaxImage from "../../components/MaxImage/MaxImage";
 import TwoImage from "../../components/TwoImage/TwoImage";
 import WideImage from "../../components/WideImage/WideImage";
 import Card from "../../components/Card/Card";
+import SingleImage from "../../components/SingleImage/SingleImage";
+import PageFooter from "../../components/PageFooter/PageFooter";
 // images
 import rashomon00 from "../../images/International/rashomon00.webp";
 import rashomon01 from "../../images/International/rashomon01.webp";
@@ -22,10 +25,13 @@ import ikiru02 from "../../images/International/ikiru02.webp";
 import throne00 from "../../images/International/throne00.webp";
 import samurai00 from "../../images/International/samurai00.webp";
 import samurai01 from "../../images/International/samurai01.webp";
-import SingleImage from "../../components/SingleImage/SingleImage";
+// footer images
+import strayDog from "../../images/Early-Works/stray-dog00.webp";
+import highLow from "../../images/highlow.webp";
 
 const International = () => {
   const [loading, setLoading] = useState(true);
+  const [footerRef, isInView] = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
@@ -46,7 +52,7 @@ const International = () => {
             <h1>International</h1>
             <h1>Success</h1>
           </DecadePageHeader>
-          <Signature isInView={false} />
+          <Signature isInView={isInView} />
         </>
       )}
 
@@ -115,6 +121,17 @@ const International = () => {
           <MaxImage
             src={samurai01}
             alt="Seven Samurai - the villagers gather around the samurai who lead them"
+          />
+
+          <PageFooter
+            nextTitle="greatness"
+            goToNext="/greatness"
+            previousTitle="early work's"
+            goToPrevious="/early"
+            footerRef={footerRef}
+            isFooterInView={isInView}
+            srcNext={highLow}
+            srcPrevious={strayDog}
           />
         </PageSection>
       )}
