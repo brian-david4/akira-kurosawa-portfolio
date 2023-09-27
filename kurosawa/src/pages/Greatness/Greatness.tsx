@@ -21,6 +21,8 @@ import badSleep00 from "../../images/Greatness/badSleep00.webp";
 import redBeard00 from "../../images/Greatness/redBeard00.webp";
 import badSleep02 from "../../images/Greatness/badSleep02.webp";
 import highLow00 from "../../images/Greatness/highLow00.webp";
+import highLow2 from "../../images/Greatness/highLow02.webp";
+import sanjuro01 from "../../images/Greatness/sanjuro01.webp";
 
 const Greatness = () => {
   const [loading, setLoading] = useState(true);
@@ -87,9 +89,24 @@ const Greatness = () => {
             alt2="The Bad Sleep Well - Journalist stand outisde a wedding hall, a man comes to close it."
           />
 
+          <DecadeText>
+            The sixties also were the end of his collaborations with actor{" "}
+            <b>toshiro mifune</b> after a falling out.
+          </DecadeText>
+
           <WideImage
             src={highLow00}
             alt="High And Low - Policemen and a family wait anxiously around a phone"
+          />
+
+          <SingleImage
+            src={highLow2}
+            alt="High and Low - A driver pleads his boss to pay the ransom of his son whilst three police officers look on"
+          />
+
+          <WideImage
+            src={sanjuro01}
+            alt="Sanjuro - samurai bow to show gratitude"
           />
         </PageSection>
       )}
