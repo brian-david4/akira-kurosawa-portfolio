@@ -10,10 +10,14 @@ import PageSection from "../../components/PageSection/PageSection";
 import WideImage from "../../components/WideImage/WideImage";
 import DecadeText from "../../components/DecadeText/DecadeText";
 import TwoImage from "../../components/TwoImage/TwoImage";
+import SingleImage from "../../components/SingleImage/SingleImage";
+import MaxImage from "../../components/MaxImage/MaxImage";
 // images
 import redBeard02 from "../../images/Greatness/redBeard02.webp";
 import sanjuro00 from "../../images/Greatness/sanjuro00.webp";
 import redBeard01 from "../../images/Greatness/redbeard01.webp";
+import badSleep01 from "../../images/Greatness/badSleep01.webp";
+import badSleep00 from "../../images/Greatness/badSleep00.webp";
 
 const Greatness = () => {
   const [loading, setLoading] = useState(true);
@@ -61,6 +65,16 @@ const Greatness = () => {
             src2={redBeard01}
             alt1="Sanjuro - A group of samurai bow and kneel infront of the protagonist"
             alt2="Red Beard - doctors and family members kneel around a sick child"
+          />
+
+          <SingleImage
+            src={badSleep01}
+            alt="The Bad Sleep Well - A group of journalists look off screen"
+          />
+
+          <MaxImage
+            src={badSleep00}
+            alt="High and Low - heroin addicts in the darkness"
           />
         </PageSection>
       )}
