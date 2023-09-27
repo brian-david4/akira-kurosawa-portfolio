@@ -18,6 +18,9 @@ import sanjuro00 from "../../images/Greatness/sanjuro00.webp";
 import redBeard01 from "../../images/Greatness/redbeard01.webp";
 import badSleep01 from "../../images/Greatness/badSleep01.webp";
 import badSleep00 from "../../images/Greatness/badSleep00.webp";
+import redBeard00 from "../../images/Greatness/redBeard00.webp";
+import badSleep02 from "../../images/Greatness/badSleep02.webp";
+import highLow00 from "../../images/Greatness/highLow00.webp";
 
 const Greatness = () => {
   const [loading, setLoading] = useState(true);
@@ -74,7 +77,19 @@ const Greatness = () => {
 
           <MaxImage
             src={badSleep00}
-            alt="High and Low - heroin addicts in the darkness"
+            alt="The Bad Sleep Well - 2 men in suits confront a business man"
+          />
+
+          <TwoImage
+            src1={redBeard00}
+            src2={badSleep02}
+            alt1="Red Beard - a man and woman stand under an umbrella in the snow"
+            alt2="The Bad Sleep Well - Journalist stand outisde a wedding hall, a man comes to close it."
+          />
+
+          <WideImage
+            src={highLow00}
+            alt="High And Low - Policemen and a family wait anxiously around a phone"
           />
         </PageSection>
       )}
