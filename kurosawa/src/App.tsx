@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import EarlyWorks from "./pages/EarlyWorks/EarlyWorks";
 import International from "./pages/International/International";
 import Greatness from "./pages/Greatness/Greatness";
+import Legacy from "./pages/Legacy/Legacy";
 
 function App() {
   const location = useLocation();
@@ -14,6 +15,7 @@ function App() {
         <Route path="/early" element={<EarlyWorks />} />
         <Route path="/international" element={<International />} />
         <Route path="/greatness" element={<Greatness />} />
+        <Route path="/legacy" element={<Legacy />} />
       </Routes>
     </>
   );
