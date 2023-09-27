@@ -16,6 +16,19 @@
   display: grid;
   place-items: center;
 }
+.menuLabelContainer .textWrap {
+  position: relative;
+  display: inline-block;
+  min-width: 0.3em;
+  transition: transform 500ms cubic-bezier(0.45, 0, 0.55, 1);
+}
+.textWrap::after {
+  content: attr(data-ltr);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  appearance: none;
+}
 
 .btnInnerMenu {
   position: absolute;
@@ -26,12 +39,8 @@
   user-select: none;
   transition: all 350ms ease-in-out;
 }
-.btnInnerMenu > span {
-  display: inline-block;
-  user-select: none;
-}
-.btnInnerMenu:hover {
-  scale: 1.1;
+.btnInnerMenu:hover > .textWrap {
+  transform: translateY(-100%);
 }
 /* navMenu */
 .navMenu {
