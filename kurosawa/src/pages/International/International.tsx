@@ -28,6 +28,7 @@ import samurai01 from "../../images/International/samurai01.webp";
 // footer images
 import strayDog from "../../images/Early-Works/stray-dog00.webp";
 import highLow from "../../images/highlow.webp";
+import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 
 const International = () => {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ const International = () => {
 
       {!loading && (
         <>
+          <DecadeNavBar />
           <KurosawaName />
           <DecadePageHeader>
             <h1>International</h1>
