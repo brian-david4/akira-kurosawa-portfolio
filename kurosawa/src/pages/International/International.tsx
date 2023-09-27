@@ -10,11 +10,19 @@ import DecadeText from "../../components/DecadeText/DecadeText";
 import MaxImage from "../../components/MaxImage/MaxImage";
 import TwoImage from "../../components/TwoImage/TwoImage";
 import WideImage from "../../components/WideImage/WideImage";
+import Card from "../../components/Card/Card";
 // images
 import rashomon00 from "../../images/International/rashomon00.webp";
 import rashomon01 from "../../images/International/rashomon01.webp";
 import rashomonbts00 from "../../images/International/rashomonbts00.webp";
 import rashomon02 from "../../images/International/rashomon02.webp";
+import ikiru01 from "../../images/International/ikiru01.webp";
+import ikiru00 from "../../images/International/ikiru00.webp";
+import ikiru02 from "../../images/International/ikiru02.webp";
+import throne00 from "../../images/International/throne00.webp";
+import samurai00 from "../../images/International/samurai00.webp";
+import samurai01 from "../../images/International/samurai01.webp";
+import SingleImage from "../../components/SingleImage/SingleImage";
 
 const International = () => {
   const [loading, setLoading] = useState(true);
@@ -77,6 +85,38 @@ const International = () => {
             it's innovative use of the untrustworthy narrator, as the story is
             about one event told from four seperate points of view.
           </DecadeText>
+
+          <Card
+            src={ikiru01}
+            alt="Ikiru - a man at work stares emptily at his office and the people in it"
+          >
+            <i>ikiru</i> 1952
+          </Card>
+
+          <MaxImage
+            src={ikiru00}
+            alt="Ikiru - The protagonsit has decided to do good with his life, and looks at a pile of rubbish where he plans to make a park"
+          />
+
+          <SingleImage
+            src={samurai00}
+            alt="Seven Samurai - a samurai stands on a hill, holding a katana on his shoulder"
+          />
+
+          <WideImage
+            src={throne00}
+            alt="Throne of Blood - the king, peppered with arrows, lies on the ground. his soldiers stand around him"
+          />
+
+          <MaxImage
+            src={samurai01}
+            alt="Seven Samurai - the villagers gather around the samurai who lead them"
+          />
+
+          <WideImage
+            src={ikiru02}
+            alt="Ikiru - A man in a suit and winter coat walks over a bridge with the sky behind him"
+          />
         </PageSection>
       )}
     </>
