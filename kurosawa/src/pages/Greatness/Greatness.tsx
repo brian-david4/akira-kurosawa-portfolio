@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
@@ -23,9 +24,15 @@ import badSleep02 from "../../images/Greatness/badSleep02.webp";
 import highLow00 from "../../images/Greatness/highLow00.webp";
 import highLow2 from "../../images/Greatness/highLow02.webp";
 import sanjuro01 from "../../images/Greatness/sanjuro01.webp";
+import PageFooter from "../../components/PageFooter/PageFooter";
+// footer images
+import footerNext from "../../images/ran1.webp";
+import footerPrevious from "../../images/International/throne00.webp";
 
 const Greatness = () => {
   const [loading, setLoading] = useState(true);
+  const [footerRef, isInView] = useInView({ threshold: 0.4 });
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -44,7 +51,7 @@ const Greatness = () => {
         <>
           <KurosawaName />
           <DecadeNavBar />
-          <Signature isInView={false} />
+          <Signature isInView={isInView} />
           <DecadePageHeader>
             <h1>Greatness</h1>
           </DecadePageHeader>
@@ -107,6 +114,17 @@ const Greatness = () => {
           <WideImage
             src={sanjuro01}
             alt="Sanjuro - samurai bow to show gratitude"
+          />
+
+          <PageFooter
+            nextTitle="legacy"
+            previousTitle="international success"
+            goToNext="/legacy"
+            goToPrevious="/international"
+            srcNext={footerNext}
+            srcPrevious={footerPrevious}
+            footerRef={footerRef}
+            isFooterInView={isInView}
           />
         </PageSection>
       )}
