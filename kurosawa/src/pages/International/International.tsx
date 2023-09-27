@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
@@ -6,6 +7,7 @@ import Signature from "../../components/Signature/Signature";
 import Loading from "../../components/Loading/Loading";
 import PageSection from "../../components/PageSection/PageSection";
 import DecadeText from "../../components/DecadeText/DecadeText";
+import MaxImage from "../../components/MaxImage/MaxImage";
 
 const International = () => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +20,10 @@ const International = () => {
   });
   return (
     <>
-      {loading && <Loading title="international success" />}
+      <AnimatePresence mode="wait">
+        {loading && <Loading title="international success" />}
+      </AnimatePresence>
+
       {!loading && (
         <>
           <KurosawaName />
