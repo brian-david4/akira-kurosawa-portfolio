@@ -1,4 +1,5 @@
 import { AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 
 import DecadePageHeader from "../../components/DecadePageHeader/DecadePageHeader";
@@ -13,6 +14,7 @@ import WideImage from "../../components/WideImage/WideImage";
 import TwoImage from "../../components/TwoImage/TwoImage";
 import SingleImage from "../../components/SingleImage/SingleImage";
 import Card from "../../components/Card/Card";
+import PageFooter from "../../components/PageFooter/PageFooter";
 // images
 import ran04 from "../../images/Legacy/ran04.webp";
 import ran00 from "../../images/Legacy/ran00.webp";
@@ -30,9 +32,14 @@ import uzala01 from "../../images/Legacy/uzala01.webp";
 import uzala02 from "../../images/Legacy/uzala02.webp";
 import uzala03 from "../../images/Legacy/uzala03.webp";
 import uzala04 from "../../images/Legacy/uzala04.webp";
+// footer images
+import badSleep02 from "../../images/Greatness/badSleep02.webp";
+import ran1 from "../../images/ran1.webp";
 
 const Legacy = () => {
   const [loading, setLoading] = useState(true);
+  const [footerRef, isInView] = useInView({ threshold: 0.4 });
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -146,6 +153,17 @@ const Legacy = () => {
           <WideImage
             src={dreams03}
             alt="Dreams - a man walks out of a tunnel at the blueness of dawn."
+          />
+
+          <PageFooter
+            nextTitle="home"
+            previousTitle="greatness"
+            goToNext="/"
+            goToPrevious="/greatness"
+            footerRef={footerRef}
+            isFooterInView={isInView}
+            srcNext={ran1}
+            srcPrevious={badSleep02}
           />
         </PageSection>
       )}
