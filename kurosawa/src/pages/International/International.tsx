@@ -70,6 +70,13 @@ const International = () => {
             src={rashomon02}
             alt="Rashomon - Dramtic close up of woman with knife in her hand"
           />
+
+          <DecadeText>
+            <i>rashomon</i> gathered a lot of attention at the venice film
+            festival, winning a golden bear award. the movie is respected for
+            it's innovative use of the untrustworthy narrator, as the story is
+            about one event told from four seperate points of view.
+          </DecadeText>
         </PageSection>
       )}
     </>
