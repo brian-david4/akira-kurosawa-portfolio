@@ -27,7 +27,7 @@ import samurai00 from "../../images/International/samurai00.webp";
 import samurai01 from "../../images/International/samurai01.webp";
 // footer images
 import strayDog from "../../images/Early-Works/stray-dog00.webp";
-import highLow from "../../images/highlow.webp";
+import badSleep02 from "../../images/Greatness/badSleep02.webp";
 import DecadeNavBar from "../../components/DecadeNavBar/DecadeNavBar";
 
 const International = () => {
@@ -132,7 +132,7 @@ const International = () => {
             goToPrevious="/early"
             footerRef={footerRef}
             isFooterInView={isInView}
-            srcNext={highLow}
+            srcNext={badSleep02}
             srcPrevious={strayDog}
           />
         </PageSection>
