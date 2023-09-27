@@ -20,6 +20,16 @@ import ran02 from "../../images/Legacy/ran02.webp";
 import dreams02 from "../../images/Legacy/dreams02.webp";
 import kagebts00 from "../../images/Legacy/kagebts00.webp";
 import ran03 from "../../images/Legacy/ran03.webp";
+import mada01 from "../../images/Legacy/mada01.webp";
+import mada02 from "../../images/Legacy/mada02.webp";
+import dreams00 from "../../images/Legacy/dreams00.webp";
+import dreams01 from "../../images/Legacy/dreams01.webp";
+import dreams03 from "../../images/Legacy/dreams03.webp";
+import uzala00 from "../../images/Legacy/uzala00.webp";
+import uzala01 from "../../images/Legacy/uzala01.webp";
+import uzala02 from "../../images/Legacy/uzala02.webp";
+import uzala03 from "../../images/Legacy/uzala03.webp";
+import uzala04 from "../../images/Legacy/uzala04.webp";
 
 const Legacy = () => {
   const [loading, setLoading] = useState(true);
@@ -85,11 +95,58 @@ const Legacy = () => {
 
           <SingleImage src={ran03} alt="Ran - a shot of green hills" />
 
-          <Card src={kagebts00} alt="">
+          <Card src={kagebts00} alt="Kurosawa behind the scenes">
             kurosawa behind the scenes filming <i>kagemusha</i>
           </Card>
 
-          <MaxImage src={dreams02} alt="" />
+          <MaxImage
+            src={dreams02}
+            alt="Dreams - a young boy stands at the gate of his house"
+          />
+
+          <TwoImage
+            src1={mada01}
+            src2={mada02}
+            alt1="Madadayo - a young boy hiding behind hay stacks whilst people on the hill behind look for him"
+            alt2="Madadayo - A couple sit on the step of a small shed."
+          />
+
+          <WideImage
+            src={uzala04}
+            alt="Dersu Uzala - gazing at the sunset and moonrise"
+          />
+
+          <WideImage
+            src={uzala03}
+            alt="Dersu Uzala - a soldier and a hunter stand at sunset"
+          />
+
+          <SingleImage
+            src={dreams00}
+            alt="Dreams - a recreation of 'Crows over Wheatfields' by van gogh in real life"
+          />
+
+          <TwoImage
+            src1={uzala01}
+            src2={uzala02}
+            alt1="Dersu Uzala - a hunter through the branches of a tree"
+            alt2="Dersu Uzala - a soldier and hunter in a field of tall grass"
+          />
+
+          <WideImage
+            src={uzala00}
+            alt="Dersu Uzala - a hunter and a soldier look over their shoulder at the camera."
+          />
+
+          <MaxImage
+            src={dreams01}
+            alt="Dreams - a young boy walks through a field of flowers with a rainbow over it"
+          />
+
+          <WideImage
+            src={dreams03}
+            alt="Dreams - a man walks out of a tunnel at the blueness of dawn."
+          />
         </PageSection>
       )}
     </>
