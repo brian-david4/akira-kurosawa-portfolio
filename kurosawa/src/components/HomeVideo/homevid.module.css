@@ -1,0 +1,19 @@
+.backgroundImage {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  filter: brightness(67%);
+  display: grid;
+  place-items: center;
+}
+.decadeTitle {
+  position: absolute;
+  left: 5vmin;
+  top: 5vmin;
+  letter-spacing: 2px;
+  font-family: "Supreme", sans-serif;
+  font-weight: 400;
+  color: ivory;
+  mix-blend-mode: screen;
+}

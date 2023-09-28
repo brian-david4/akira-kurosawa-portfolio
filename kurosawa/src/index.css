@@ -78,3 +78,14 @@ body {
 .line {
   display: inline-block !important;
 }
+
+#fortyVideo,
+#fiftyVideo {
+  scale: 1.5;
+}
+#sixtyVideo {
+  scale: 1.4;
+}
+#restVideo {
+  scale: 1.2;
+}

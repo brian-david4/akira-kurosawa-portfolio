@@ -10,6 +10,7 @@ import fifty from "/1950.mp4";
 import rest from "/restFilm.mp4";
 import sixty from "/1960.mp4";
 import ran from "../../images/ran1.webp";
+import HomeVideo from "../../components/HomeVideo/HomeVideo";
 
 const Home = () => {
   const [isFortiesActive, setIsFortiesActive] = useState(false);
@@ -64,6 +65,7 @@ const Home = () => {
       </AnimatePresence>
 
       <div className={styles.pageBg}>
+        {/* invisible divs */}
         <div className={styles.nameSignature}>Akira Kurosawa</div>
         <Menu />
         <div
@@ -82,118 +84,27 @@ const Home = () => {
           onMouseEnter={() => activeWrap(3)}
           className={styles.restOfSection}
         ></div>
+
         {/* 1940's */}
         <AnimatePresence mode="wait">
-          {isFortiesActive && (
-            <>
-              <motion.div className={styles.backgroundImage}>
-                <video
-                  className={styles.fortyVideo}
-                  autoPlay
-                  playsInline
-                  muted
-                  loop
-                  draggable="false"
-                >
-                  <source src={forty} />
-                </video>
-              </motion.div>
-              <motion.h1
-                className={styles.decadeTitle}
-                variants={decadeImageFade}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-              >
-                40's
-              </motion.h1>
-            </>
-          )}
+          {isFortiesActive && <HomeVideo src={forty} id="fortyVideo" />}
         </AnimatePresence>
+
         {/* 1950's */}
         <AnimatePresence mode="wait">
-          {isFiftiesActive && (
-            <>
-              <div className={styles.backgroundImage}>
-                <video
-                  className={styles.fiftyVideo}
-                  autoPlay
-                  playsInline
-                  muted
-                  loop
-                  draggable="false"
-                >
-                  <source src={fifty} />
-                </video>
-              </div>
-              <motion.h1
-                className={styles.decadeTitle}
-                variants={decadeImageFade}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-              >
-                50's
-              </motion.h1>
-            </>
-          )}
+          {isFiftiesActive && <HomeVideo src={fifty} id="fiftyVideo" />}
         </AnimatePresence>
+
         {/* 1960's */}
         <AnimatePresence mode="wait">
-          {isSixtiesActive && (
-            <>
-              <div className={styles.backgroundImage}>
-                <video
-                  className={styles.sixtyVideo}
-                  autoPlay
-                  playsInline
-                  muted
-                  loop
-                  draggable="false"
-                >
-                  <source src={sixty} />
-                </video>
-              </div>
-              <motion.h1
-                className={styles.decadeTitle}
-                variants={decadeImageFade}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-              >
-                60's
-              </motion.h1>
-            </>
-          )}
+          {isSixtiesActive && <HomeVideo src={sixty} id="sixtyVideo" />}
         </AnimatePresence>
+
         {/* rest */}
         <AnimatePresence mode="wait">
-          {isRestActive && (
-            <>
-              <motion.div className={styles.backgroundImage}>
-                <video
-                  className={styles.restVideo}
-                  autoPlay
-                  playsInline
-                  muted
-                  loop
-                  draggable="false"
-                >
-                  <source src={rest} />
-                </video>
-              </motion.div>
-              <motion.h1
-                className={styles.decadeTitle}
-                variants={decadeImageFade}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-              >
-                '70-98
-              </motion.h1>
-            </>
-          )}
+          {isRestActive && <HomeVideo src={rest} id="restVideo" />}
         </AnimatePresence>
+
         {/* default pic */}
         <AnimatePresence mode="wait">
           {!isFortiesActive &&
