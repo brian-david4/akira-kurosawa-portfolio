@@ -4,10 +4,11 @@ import styles from "./homevid.module.css";
 
 interface HomeVideoProps {
   src: string;
+  decade: string;
   id: string;
 }
 
-const HomeVideo = ({ src, id }: HomeVideoProps) => {
+const HomeVideo = ({ src, id, decade }: HomeVideoProps) => {
   return (
     <>
       <motion.div className={styles.backgroundImage}>
@@ -23,7 +24,7 @@ const HomeVideo = ({ src, id }: HomeVideoProps) => {
         animate="enter"
         exit="exit"
       >
-        40's
+        {decade}
       </motion.h1>
     </>
   );

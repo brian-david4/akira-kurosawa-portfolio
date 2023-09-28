@@ -11,11 +11,11 @@ const HomeIntro = () => {
     tl.fromTo(
       ".nameEn",
       { opacity: 0.7 },
-      { duration: 1.5, opacity: 0, delay: 1.5 }
+      { duration: 1.5, opacity: 0, delay: 1 }
     )
       .fromTo(".nameJp", { opacity: 0 }, { duration: 1.5, opacity: 0.7 })
       .to(".nameJp", { autoAlpha: 0, duration: 1.5, delay: 1 })
-      .to(".imgPortrait", { duration: 2.5, opacity: 1 });
+      .to(".imgPortrait", { duration: 1.5, opacity: 1 });
   }, []);
 
   return (

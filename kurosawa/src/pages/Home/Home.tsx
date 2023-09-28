@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntroPlay(false);
-    }, 10500);
+    }, 9500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -87,22 +87,30 @@ const Home = () => {
 
         {/* 1940's */}
         <AnimatePresence mode="wait">
-          {isFortiesActive && <HomeVideo src={forty} id="fortyVideo" />}
+          {isFortiesActive && (
+            <HomeVideo decade="40's" src={forty} id="fortyVideo" />
+          )}
         </AnimatePresence>
 
         {/* 1950's */}
         <AnimatePresence mode="wait">
-          {isFiftiesActive && <HomeVideo src={fifty} id="fiftyVideo" />}
+          {isFiftiesActive && (
+            <HomeVideo decade="50's" src={fifty} id="fiftyVideo" />
+          )}
         </AnimatePresence>
 
         {/* 1960's */}
         <AnimatePresence mode="wait">
-          {isSixtiesActive && <HomeVideo src={sixty} id="sixtyVideo" />}
+          {isSixtiesActive && (
+            <HomeVideo decade="60's" src={sixty} id="sixtyVideo" />
+          )}
         </AnimatePresence>
 
         {/* rest */}
         <AnimatePresence mode="wait">
-          {isRestActive && <HomeVideo src={rest} id="restVideo" />}
+          {isRestActive && (
+            <HomeVideo decade="'70-98" src={rest} id="restVideo" />
+          )}
         </AnimatePresence>
 
         {/* default pic */}
