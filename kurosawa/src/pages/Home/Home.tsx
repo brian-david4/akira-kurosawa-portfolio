@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { decadeImageFade } from "./HomeAnim";
+import { AnimatePresence } from "framer-motion";
 import Menu from "../../components/Menu/Menu";
 import HomeIntro from "../../components/HomeIntro/HomeIntro";
+import HomeVideo from "../../components/HomeVideo/HomeVideo";
 // images
 import styles from "./Home.module.css";
 import forty from "/1940.mp4";
 import fifty from "/1950.mp4";
 import rest from "/restFilm.mp4";
 import sixty from "/1960.mp4";
-import ran from "../../images/ran1.webp";
-import HomeVideo from "../../components/HomeVideo/HomeVideo";
 
 const Home = () => {
   const [isFortiesActive, setIsFortiesActive] = useState(false);
@@ -119,17 +117,7 @@ const Home = () => {
             !isFiftiesActive &&
             !isSixtiesActive &&
             !isRestActive && (
-              <>
-                <motion.div className={styles.backgroundImage}>
-                  <img src={ran} />
-                </motion.div>
-                <motion.h1
-                  variants={decadeImageFade}
-                  initial="initial"
-                  animate="enter"
-                  exit="exit"
-                ></motion.h1>
-              </>
+              <HomeVideo decade="'70-98" src={rest} id="restVideo" />
             )}
         </AnimatePresence>
       </div>
