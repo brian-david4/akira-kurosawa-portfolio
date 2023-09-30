@@ -2,6 +2,10 @@
   font-family: "Neue Montreal Book";
   src: url("../fonts/PPNeueMontreal-Book.otf");
 }
+@font-face {
+  font-family: "Melodrama";
+  src: url("../fonts/Melodrama-Regular.otf");
+}
 
 p {
   font-size: 20px;
