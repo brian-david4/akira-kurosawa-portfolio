@@ -12,37 +12,35 @@ const DecadeNavBar = () => {
         className={styles.menuBtn}
         onClick={() => setMenuActive(!menuActive)}
       >
-        <div className={styles.menuLabelContainer}>
-          <div className={styles.btnInnerMenu} data-active-menu={menuActive}>
-            <span
-              style={{ transitionDelay: "0.025s" }}
-              data-ltr="m"
-              className={styles.textWrap}
-            >
-              m
-            </span>
-            <span
-              style={{ transitionDelay: "0.05s" }}
-              data-ltr="e"
-              className={styles.textWrap}
-            >
-              e
-            </span>
-            <span
-              style={{ transitionDelay: "0.075s" }}
-              data-ltr="n"
-              className={styles.textWrap}
-            >
-              n
-            </span>
-            <span
-              style={{ transitionDelay: "0.1s" }}
-              data-ltr="u"
-              className={styles.textWrap}
-            >
-              u
-            </span>
-          </div>
+        <div className={styles.btnInnerMenu} data-active-menu={menuActive}>
+          <span
+            style={{ transitionDelay: "0.025s" }}
+            data-ltr="m"
+            className={styles.textWrap}
+          >
+            m
+          </span>
+          <span
+            style={{ transitionDelay: "0.05s" }}
+            data-ltr="e"
+            className={styles.textWrap}
+          >
+            e
+          </span>
+          <span
+            style={{ transitionDelay: "0.075s" }}
+            data-ltr="n"
+            className={styles.textWrap}
+          >
+            n
+          </span>
+          <span
+            style={{ transitionDelay: "0.1s" }}
+            data-ltr="u"
+            className={styles.textWrap}
+          >
+            u
+          </span>
         </div>
       </div>
       <AnimatePresence mode="wait">

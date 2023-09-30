@@ -4,22 +4,21 @@
   position: sticky;
   top: 10px;
   right: 5vmin;
-  width: 8vmin;
-  height: 2.5vmin;
-  border-radius: 20px;
+  height: 20px;
+  width: 50px;
   display: grid;
   place-items: center;
   z-index: 20;
   overflow: hidden;
 }
-.menuLabelContainer {
-  display: grid;
-  place-items: center;
-}
-.menuLabelContainer .textWrap {
+.textWrap {
   position: relative;
   display: inline-block;
   min-width: 0.3em;
+  width: 200px;
+  height: 50px;
+  width: fit-content;
+  height: fit-content;
   transition: transform 500ms cubic-bezier(0.45, 0, 0.55, 1);
 }
 .textWrap::after {
