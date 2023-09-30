@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./DNavBar.module.css";
 import DecadeNavMenu from "./DecadeNavMenu";
 import { AnimatePresence } from "framer-motion";
 
 const DecadeNavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
+
+  useEffect(() => {
+    if (menuActive) {
+      document.body.style.position = "fixed";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflowX = "hidden";
+      document.body.style.overflowY = "visible";
+      document.body.style.position = "inherit";
+    }
+  }, [menuActive]);
 
   return (
     <>
