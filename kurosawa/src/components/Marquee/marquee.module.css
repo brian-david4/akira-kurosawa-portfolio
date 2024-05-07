@@ -4,19 +4,14 @@
   position: absolute;
   left: 0;
   height: 25vh;
-  width: 100vw;
   overflow: hidden;
   background-color: var(--intro-black);
   padding: 2.5vh 0;
   display: flex;
-}
-.marqueeInner {
-  position: relative;
-  width: fit-content;
-  display: flex;
-  justify-content: space-around;
+  gap: 2rem;
 }
 .marqueeItem {
+  position: relative;
   color: ivory;
   display: flex;
   align-items: center;

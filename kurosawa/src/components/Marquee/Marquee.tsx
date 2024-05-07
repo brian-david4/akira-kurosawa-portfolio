@@ -1,113 +1,50 @@
 import { useEffect } from "react";
+import useMeasure from "react-use-measure";
+import { animate, motion, useMotionValue } from "framer-motion";
 import styles from "./marquee.module.css";
-import gsap from "gsap";
 
 const Marquee = () => {
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.to(".marquee-inner", {
-      duration: 10,
-      xPercent: -100,
-      ease: "linear",
-    }).set(".marquee-inner", { xPercent: 0 });
+  const arr = new Array(20);
 
-    tl.repeat(-1);
-    return () => {
-      tl.revert();
-    };
-  }, []);
+  const xTranslate = useMotionValue(0);
+  const [ref, { width }] = useMeasure();
+
+  useEffect(() => {
+    let controls;
+    let finPosition = -width / 2 - 16;
+    controls = animate(xTranslate, [0, finPosition], {
+      ease: "linear",
+      duration: 35,
+      repeat: Infinity,
+      repeatType: "loop",
+      repeatDelay: 0,
+    });
+
+    return () => controls.stop();
+  }, [xTranslate, width]);
 
   return (
-    <div className={styles.marquee}>
-      <div className={`${styles.marqueeInner} marquee-inner`}>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-      </div>
-      <div className={`${styles.marqueeInner} marquee-inner`}>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-        <div data-lang="en" className={styles.marqueeItem}>
-          kurosawa
-        </div>
-        <div data-lang="jp" className={styles.marqueeItem}>
-          黒澤明
-        </div>
-      </div>
-    </div>
+    <motion.div style={{ x: xTranslate }} ref={ref} className={styles.marquee}>
+      {[...arr, ...arr].map((_, idx) => {
+        return idx % 2 === 0 ? (
+          <div
+            data-lang="en"
+            key={`marq_${idx}`}
+            className={styles.marqueeItem}
+          >
+            Kurosawa
+          </div>
+        ) : (
+          <div
+            data-lang="jp"
+            key={`marq_${idx}`}
+            className={styles.marqueeItem}
+          >
+            黒澤明
+          </div>
+        );
+      })}
+    </motion.div>
   );
 };
 
