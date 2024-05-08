@@ -5,33 +5,32 @@ import useMousePosition from "../../hooks/useMousePosition";
 
 interface NavImageProps {
   src: string;
+  hovered: boolean;
 }
 
-const NavImage = ({ src }: NavImageProps) => {
+const NavImage = ({ src, hovered }: NavImageProps) => {
   const { y } = useMousePosition();
   const size = 250;
 
   return (
     <motion.div
       variants={navVideo}
-      initial={{ top: "50%" }}
       animate={{
-        // left: `${x + "15%"}px`,
+        right: `50vw`,
         top: `${y - size}px`,
       }}
       exit="exit"
-      transition={{ type: "tween", ease: "backOut" }}
+      transition={{ ease: "linear", type: "tween" }}
       className={styles.navImage}
     >
       <motion.video
-        initial={{ opacity: 0 }}
         animate={{
-          opacity: 1,
-          transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+          opacity: hovered ? 1 : 0,
+          transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] },
         }}
         muted
         autoPlay
-        loop={false}
+        loop
         draggable={false}
         playsInline
       >
