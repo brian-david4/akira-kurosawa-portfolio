@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"); */
 
 .block {
   position: fixed;
@@ -24,11 +24,11 @@
   user-select: none;
 }
 .nameEn {
-  font-family: "Melodrama", serif;
+  font-family: "Melodrama Regular";
   position: absolute;
 }
 .nameJp {
-  font-family: "Sawarabi Mincho", serif;
+  font-family: "Slackside One", cursive;
   position: absolute;
   opacity: 0;
 }

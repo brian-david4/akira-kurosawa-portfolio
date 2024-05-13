@@ -19,14 +19,13 @@ const NavImage = ({ src, hovered }: NavImageProps) => {
         right: `50vw`,
         top: `${y - size}px`,
       }}
-      exit="exit"
       transition={{ ease: "linear", type: "tween" }}
       className={styles.navImage}
     >
       <motion.video
         animate={{
           opacity: hovered ? 1 : 0,
-          transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] },
+          transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
         }}
         muted
         autoPlay

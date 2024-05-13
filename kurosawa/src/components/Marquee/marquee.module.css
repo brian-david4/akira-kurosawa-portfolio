@@ -19,8 +19,8 @@
   font-size: 40px;
 }
 [data-lang="en"] {
-  font-family: "Melodrama", serif;
+  font-family: "Melodrama Regular", serif;
 }
 [data-lang="jp"] {
-  font-family: "Slackside One", cursive !important;
+  font-family: "Slackside One" !important;
 }

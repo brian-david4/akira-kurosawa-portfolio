@@ -3,10 +3,17 @@
   src: url("../fonts/PPNeueMontreal-Book.otf");
 }
 @font-face {
-  font-family: "Melodrama";
+  font-family: "Melodrama Regular";
   src: url("../fonts/Melodrama-Regular.otf");
 }
-
+@font-face {
+  font-family: "Sawarabi Mincho";
+  src: url(../fonts/SawarabiMincho-Regular.ttf);
+}
+@font-face {
+  font-family: "Slackside One";
+  src: url("../fonts/SlacksideOne-Regular.ttf");
+}
 p {
   font-size: 20px;
   font-weight: 500;
