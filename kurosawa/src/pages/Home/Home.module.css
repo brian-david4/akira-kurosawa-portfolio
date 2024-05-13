@@ -46,15 +46,6 @@
   height: 100%;
   object-fit: cover;
 }
-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10;
-  height: 100vh;
-  width: 100vw;
-}
-
 /* signature  */
 .nameSignature {
   position: fixed;
@@ -65,7 +56,7 @@ video {
   z-index: 10;
   transform: rotate(90deg);
   color: var(--menu-blue);
-  font-family: "Melodrama", serif;
+  font-family: "Melodrama Regular", serif;
   letter-spacing: 1px;
   user-select: none;
 }

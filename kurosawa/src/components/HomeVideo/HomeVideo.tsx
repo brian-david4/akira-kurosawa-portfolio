@@ -1,31 +1,33 @@
 import { motion } from "framer-motion";
-import { decadeImageFade } from "../../pages/Home/HomeAnim";
 import styles from "./homevid.module.css";
 
 interface HomeVideoProps {
-  src: string;
-  decade: string;
-  id: string;
+  // src: string;
+  // decade: string;
+  // id: string;
+  vid: VideoType;
+  decadeActive: IndexActiveType;
+  idx: number;
 }
 
-const HomeVideo = ({ src, id, decade }: HomeVideoProps) => {
+const HomeVideo = ({ vid, decadeActive, idx }: HomeVideoProps) => {
   return (
     <>
-      <motion.div className={styles.backgroundImage}>
-        <video id={id} autoPlay playsInline muted loop draggable="false">
-          <source src={src} />
-        </video>
-      </motion.div>
-
-      <motion.h1
-        className={styles.decadeTitle}
-        variants={decadeImageFade}
-        initial="initial"
-        animate="enter"
-        exit="exit"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: decadeActive.index === idx && decadeActive.isActive ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: [0.65, 0, 0.35, 1] }}
+        className={styles.homeVideoWrapper}
       >
-        {decade}
-      </motion.h1>
+        <div className={styles.backgroundImage}>
+          <video id={vid.id} autoPlay playsInline muted loop draggable="false">
+            <source src={vid.src} />
+          </video>
+        </div>
+        <h1 className={styles.decadeTitle}>{vid.decadeTitle}</h1>
+      </motion.div>
     </>
   );
 };

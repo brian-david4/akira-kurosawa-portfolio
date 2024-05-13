@@ -7,14 +7,14 @@ import HomeVideo from "../../components/HomeVideo/HomeVideo";
 import styles from "./Home.module.css";
 import forty from "/1940.mp4";
 import fifty from "/1950.mp4";
-import rest from "/restFilm.mp4";
 import sixty from "/1960.mp4";
+import rest from "/restFilm.mp4";
 
 const Home = () => {
-  const [isFortiesActive, setIsFortiesActive] = useState(false);
-  const [isFiftiesActive, setIsFiftiesActive] = useState(false);
-  const [isSixtiesActive, setIsSixtiesActive] = useState(false);
-  const [isRestActive, setIsRestActive] = useState(false);
+  const [decadeActive, setDecadeActive] = useState<IndexActiveType>({
+    index: 3,
+    isActive: true,
+  });
 
   const [isIntroPlaying, setIntroPlay] = useState(true);
 
@@ -25,36 +25,12 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const activeWrap = (key: number) => {
-    if (key === 0)
-      return (
-        setIsFortiesActive(true),
-        setIsFiftiesActive(false),
-        setIsSixtiesActive(false),
-        setIsRestActive(false)
-      );
-    if (key === 1)
-      return (
-        setIsFortiesActive(false),
-        setIsFiftiesActive(true),
-        setIsSixtiesActive(false),
-        setIsRestActive(false)
-      );
-    if (key === 2)
-      return (
-        setIsFortiesActive(false),
-        setIsFiftiesActive(false),
-        setIsSixtiesActive(true),
-        setIsRestActive(false)
-      );
-    if (key === 3)
-      return (
-        setIsFortiesActive(false),
-        setIsFiftiesActive(false),
-        setIsSixtiesActive(false),
-        setIsRestActive(true)
-      );
-  };
+  const videos: VideoType[] = [
+    { decadeTitle: "40's", src: forty, id: "fortyVideo" },
+    { decadeTitle: "50's", src: fifty, id: "fiftyVideo" },
+    { decadeTitle: "60's", src: sixty, id: "sixtyVideo" },
+    { decadeTitle: "'70-98", src: rest, id: "restVideo" },
+  ];
 
   return (
     <>
@@ -67,59 +43,45 @@ const Home = () => {
         <div className={styles.nameSignature}>Akira Kurosawa</div>
         <Menu />
         <div
-          onMouseEnter={() => activeWrap(0)}
+          onMouseEnter={() => setDecadeActive({ index: 0, isActive: true })}
           className={styles.fortiesSection}
         ></div>
         <div
-          onMouseEnter={() => activeWrap(1)}
+          onMouseEnter={() => setDecadeActive({ index: 1, isActive: true })}
           className={styles.fiftiesSection}
         ></div>
         <div
-          onMouseEnter={() => activeWrap(2)}
+          onMouseEnter={() => setDecadeActive({ index: 2, isActive: true })}
           className={styles.sixtiesSection}
         ></div>
         <div
-          onMouseEnter={() => activeWrap(3)}
+          onMouseEnter={() => setDecadeActive({ index: 3, isActive: true })}
           className={styles.restOfSection}
         ></div>
 
         {/* 1940's */}
         <AnimatePresence mode="wait">
-          {isFortiesActive && (
-            <HomeVideo decade="40's" src={forty} id="fortyVideo" />
-          )}
-        </AnimatePresence>
-
-        {/* 1950's */}
-        <AnimatePresence mode="wait">
-          {isFiftiesActive && (
-            <HomeVideo decade="50's" src={fifty} id="fiftyVideo" />
-          )}
-        </AnimatePresence>
-
-        {/* 1960's */}
-        <AnimatePresence mode="wait">
-          {isSixtiesActive && (
-            <HomeVideo decade="60's" src={sixty} id="sixtyVideo" />
-          )}
-        </AnimatePresence>
-
-        {/* rest */}
-        <AnimatePresence mode="wait">
-          {isRestActive && (
-            <HomeVideo decade="'70-98" src={rest} id="restVideo" />
-          )}
+          {videos.map((vid, idx) => {
+            return (
+              <HomeVideo
+                decadeActive={decadeActive}
+                idx={idx}
+                vid={vid}
+                key={`vid_${idx}`}
+              />
+            );
+          })}
         </AnimatePresence>
 
         {/* default pic */}
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {!isFortiesActive &&
             !isFiftiesActive &&
             !isSixtiesActive &&
             !isRestActive && (
               <HomeVideo decade="'70-98" src={rest} id="restVideo" />
             )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
     </>
   );

@@ -1,11 +1,30 @@
+.homeVideoWrapper {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
 .backgroundImage {
-  position: fixed;
+  position: relative;
   height: 100%;
   width: 100%;
-  pointer-events: none;
   filter: brightness(67%);
   display: grid;
   place-items: center;
+}
+video {
+  position: relative;
+  z-index: -10;
+  height: 100vh;
+  width: 100vw;
+}
+
+.backgroundImage > video {
+  object-fit: contain;
 }
 .decadeTitle {
   position: absolute;
