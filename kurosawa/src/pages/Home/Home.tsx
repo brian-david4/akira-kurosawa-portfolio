@@ -11,11 +11,20 @@ import sixty from "/1960.mp4";
 import rest from "/restFilm.mp4";
 
 const Home = () => {
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+      console.log(window.innerWidth);
+    });
+
+    return () => window.removeEventListener("resize", () => setScreenWidth(0));
+  }, []);
+
   const [decadeActive, setDecadeActive] = useState<IndexActiveType>({
     index: 3,
     isActive: true,
   });
-
   const [isIntroPlaying, setIntroPlay] = useState(true);
 
   useEffect(() => {
@@ -40,8 +49,8 @@ const Home = () => {
 
       <div className={styles.pageBg}>
         {/* invisible divs */}
+        <Menu screenWidth={screenWidth} />
         <div className={styles.nameSignature}>Akira Kurosawa</div>
-        <Menu />
         <div
           onMouseEnter={() => setDecadeActive({ index: 0, isActive: true })}
           className={styles.fortiesSection}

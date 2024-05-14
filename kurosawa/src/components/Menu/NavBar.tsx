@@ -3,56 +3,43 @@ import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { linkFade, navbarScale } from "./NavBarAnim";
 
-const NavBar = () => {
+interface NavBarProps {
+  screenWidth: number;
+}
+
+const NavBar = ({ screenWidth }: NavBarProps) => {
+  const links = [
+    { title: "Early Works", linkTo: "/early" },
+    { title: "International Success", linkTo: "/international" },
+    { title: "Greatness", linkTo: "/greatness" },
+    { title: "Legacy", linkTo: "/legacy" },
+  ];
 
   return (
     <>
       <div className={styles.navbarWrapper}>
         <motion.div
           variants={navbarScale}
-          initial="initial"
-          animate="enter"
-          exit="exit"
+          initial={screenWidth < 769 ? "smScreenInit" : "initial"}
+          animate={screenWidth < 769 ? "smScreen" : "enter"}
+          exit={screenWidth < 769 ? "smExit" : "exit"}
           className={styles.navbar}
         >
-          <motion.div
-            variants={linkFade}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            className={styles.navbarLink}
-          >
-            <Link to="/early">Early Works</Link>
-          </motion.div>
-          <motion.div
-            variants={linkFade}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            className={styles.navbarLink}
-          >
-            <Link to="/international">International Success</Link>
-          </motion.div>
-          <motion.div
-            variants={linkFade}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            className={styles.navbarLink}
-          >
-            <Link to="/greatness">Greatness</Link>
-          </motion.div>
-          <motion.div
-            variants={linkFade}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            className={styles.navbarLink}
-          >
-            <Link to="/legacy">Legacy</Link>
-          </motion.div>
+          {links.map((link, idx) => {
+            return (
+              <motion.div
+                key={`l_${idx}`}
+                variants={linkFade}
+                initial="initial"
+                animate="enter"
+                exit="exit"
+                className={styles.navbarLink}
+              >
+                <Link to={link.linkTo}>{link.title}</Link>
+              </motion.div>
+            );
+          })}
         </motion.div>
-
       </div>
     </>
   );
