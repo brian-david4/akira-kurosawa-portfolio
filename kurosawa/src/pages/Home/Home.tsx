@@ -59,29 +59,16 @@ const Home = () => {
           className={styles.restOfSection}
         ></div>
 
-        {/* 1940's */}
-        <AnimatePresence mode="wait">
-          {videos.map((vid, idx) => {
-            return (
-              <HomeVideo
-                decadeActive={decadeActive}
-                idx={idx}
-                vid={vid}
-                key={`vid_${idx}`}
-              />
-            );
-          })}
-        </AnimatePresence>
-
-        {/* default pic */}
-        {/* <AnimatePresence mode="wait">
-          {!isFortiesActive &&
-            !isFiftiesActive &&
-            !isSixtiesActive &&
-            !isRestActive && (
-              <HomeVideo decade="'70-98" src={rest} id="restVideo" />
-            )}
-        </AnimatePresence> */}
+        {videos.map((vid, idx) => {
+          return (
+            <HomeVideo
+              decadeActive={decadeActive}
+              idx={idx}
+              vid={vid}
+              key={`vid_${idx}`}
+            />
+          );
+        })}
       </div>
     </>
   );
