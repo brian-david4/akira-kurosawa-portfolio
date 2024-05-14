@@ -28,7 +28,7 @@
   position: absolute;
 }
 .nameJp {
-  font-family: "Slackside One", cursive;
+  font-family: "Slackside One";
   font-size: 10vh;
   position: absolute;
   opacity: 0;

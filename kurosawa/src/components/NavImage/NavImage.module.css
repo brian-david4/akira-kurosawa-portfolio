@@ -18,6 +18,7 @@
   object-fit: cover;
   filter: brightness(0.8);
   opacity: 0;
+  mix-blend-mode: difference;
 }
 @media (max-width: 768px) {
   .navImage {

@@ -10,6 +10,8 @@
   place-items: center;
   z-index: 20;
   overflow: hidden;
+  mix-blend-mode: difference;
+  color: #f1ddbb;
 }
 .textWrap {
   position: relative;
@@ -68,36 +70,4 @@
   justify-content: center;
   gap: 1.5vh;
   overflow: visible;
-}
-.linkWrapper {
-  height: fit-content;
-  width: fit-content;
-  overflow: hidden;
-  transform-origin: left;
-  transition: transform 5s ease-in-out;
-}
-.linkWrapper:hover {
-  transform: scaleX(1.3);
-}
-.link {
-  position: relative;
-  width: fit-content;
-  font-family: "Khand", sans-serif;
-  font-size: 100px;
-  line-height: 1;
-  transition: font-size 250ms ease-in-out;
-}
-.link > a {
-  position: inline-block;
-  color: black;
-  text-decoration: none;
-  white-space: nowrap;
-}
-link:hover > a {
-  transform: scale(1.1);
-}
-@media (max-width: 800px) {
-  .link {
-    font-size: 8.5vmin;
-  }
 }

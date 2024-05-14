@@ -4,7 +4,7 @@ export const menuBtn = {
   },
   enter: {
     y: "0%",
-    transition: { duration: 0.8, ease: [0.87, 0, 0.13, 1] },
+    transition: { duration: 1.5, ease: [0.22, 1, 0.36, 1] },
   },
   exit: {
     y: "-120%",
