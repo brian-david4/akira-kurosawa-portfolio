@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styles from "./DecadeText.module.css";
 
 interface DecadeTextProps {
-  children: React.ReactNode;
+  children: string | React.ReactNode;
 }
 
 const DecadeText = ({ children }: DecadeTextProps) => {

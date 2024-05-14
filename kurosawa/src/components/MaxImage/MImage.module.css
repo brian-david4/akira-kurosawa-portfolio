@@ -2,6 +2,8 @@
   width: var(--i-max);
   height: fit-content;
   background-color: var(--legacy);
+  display: grid;
+  place-items: center;
 }
 .imageMax > img {
   width: 100%;

@@ -111,6 +111,14 @@ const International = () => {
             alt="Seven Samurai - a samurai stands on a hill, holding a katana on his shoulder"
           />
 
+          <DecadeText>
+            During this time he also released perhaps his most famous work:{" "}
+            <i>Seven Samurai</i>. A story about the gathering a group of
+            unassociated heroes to fight a common enemy. This movie inspired
+            George Lucas to create start wars and many modern movies of the
+            comicbook genre.
+          </DecadeText>
+
           <WideImage
             src={throne00}
             alt="Throne of Blood - the king, peppered with arrows, lies on the ground. his soldiers stand around him"

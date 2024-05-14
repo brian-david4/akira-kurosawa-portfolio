@@ -118,6 +118,11 @@ const Legacy = () => {
             alt2="Madadayo - A couple sit on the step of a small shed."
           />
 
+          <DecadeText>
+            Even later on in his career Kurosawa would still win awards such as
+            the <i>palme d'or</i> for the 1980 effort <i>kagemusha</i>.
+          </DecadeText>
+
           <WideImage
             src={uzala04}
             alt="Dersu Uzala - gazing at the sunset and moonrise"
@@ -127,6 +132,12 @@ const Legacy = () => {
             src={uzala03}
             alt="Dersu Uzala - a soldier and a hunter stand at sunset"
           />
+
+          <DecadeText>
+            With his latter works his domestic japanese audience would not
+            appreciate his works, and were often recieved with criticism yet
+            they were much more succesful in europe and america.
+          </DecadeText>
 
           <SingleImage
             src={dreams00}

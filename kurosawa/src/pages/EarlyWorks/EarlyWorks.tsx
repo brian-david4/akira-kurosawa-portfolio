@@ -64,9 +64,9 @@ const EarlyWorks = () => {
           <WideImage src={sugata00} alt="Sanshiro Sugata" />
           <DecadeText>
             After working as an assistant director for 6 years Akira Kurosawa
-            debuted as a director with: <i>Sanshiro Sugata</i>
-            censors claimed the film did not keep with the japanese war times
-            standards - 18mins of the movies are still considered <b>lost</b>
+            debuted as a director with: <i>Sanshiro Sugata (1946)</i>. censors
+            claimed the film did not keep with the japanese war times standards
+            - 18mins of the movies are still considered <b>lost ..</b>
           </DecadeText>
 
           <TwoImage
@@ -77,10 +77,9 @@ const EarlyWorks = () => {
           />
 
           <DecadeText>
-            kurosawa's first post war film was <i>no regrets for our youth</i>-
-            this theme would carry on even through to his later works. it
-            received mixed reviews from critics for its political themes or
-            something idk.
+            kurosawa's first post war film was <i>no regrets for our youth</i> -
+            it received mixed reviews from critics (though well recieved by the
+            mass audience) for its individualist view of society.
           </DecadeText>
 
           <Card src={noRegretBts} alt="Akira Kurosawa directing a scene">
@@ -106,10 +105,10 @@ const EarlyWorks = () => {
 
           <DecadeText>
             kurosawa emerged from the 40's a success. though not always with the
-            critics 'cuz of his themes etc. but he was most often a hit with the
-            audience. so the studios continued funding his future projects, also
-            kurosawa would get backed by contemporaries such as Yasujiro Ozu,
-            which put more pressure on the studios.
+            critics because of his challenging themes etc. but he was most often
+            a hit with the audience. so the studios continued funding his future
+            projects, also kurosawa would get backed by contemporaries such as
+            Yasujiro Ozu, which put more pressure on the studios.
           </DecadeText>
 
           <SingleImage
@@ -121,8 +120,6 @@ const EarlyWorks = () => {
             src={noRegrets}
             alt="No Regrets For Our Youth - Man lays in a filed with a lady beside him"
           />
-
-          <div>somehing extra fro scroll</div>
 
           <PageFooter
             footerRef={footerRef}

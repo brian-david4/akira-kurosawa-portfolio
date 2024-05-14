@@ -66,9 +66,9 @@ const Greatness = () => {
           />
 
           <DecadeText>
-            the sixties was the most period for <b>akira kurosawa</b>. his movie
-            series consisting of <i>yojimbo</i> and <i>sunjuro</i> were adapted
-            by hollywood as the basis for the western:{" "}
+            the sixties was the most productive period for <b>akira kurosawa</b>
+            . his movie series consisting of <i>yojimbo</i> and <i>sunjuro</i>{" "}
+            were adapted by hollywood as the basis for the western:{" "}
             <i>A fistful of dollars</i>.
           </DecadeText>
 
@@ -98,7 +98,8 @@ const Greatness = () => {
 
           <DecadeText>
             The sixties also were the end of his collaborations with actor{" "}
-            <b>toshiro mifune</b> after a falling out.
+            <b>toshiro mifune</b> after a falling out. The actor by now was very
+            well regarded in Japan and internationally.
           </DecadeText>
 
           <WideImage
@@ -110,7 +111,10 @@ const Greatness = () => {
             src={highLow2}
             alt="High and Low - A driver pleads his boss to pay the ransom of his son whilst three police officers look on"
           />
-
+          <DecadeText>
+            his movie <i>high and low</i> broke his box office records, his
+            third movie in a row to do so.
+          </DecadeText>
           <WideImage
             src={sanjuro01}
             alt="Sanjuro - samurai bow to show gratitude"
