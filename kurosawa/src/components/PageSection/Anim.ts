@@ -9,6 +9,7 @@ export const sectionOne = {
     transition: {
       duration: 1.8,
       ease: [0.65, 0, 0.35, 1],
+      staggerChildren: 0.2,
     },
   },
 };

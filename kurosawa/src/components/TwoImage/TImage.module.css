@@ -12,6 +12,8 @@
   height: 80%;
   width: var(--i-two);
   background-color: var(--legacy);
+  display: grid;
+  place-items: center;
 }
 .singleImgWrapper > img {
   height: 100%;
@@ -20,7 +22,7 @@
   object-position: center;
   border-radius: 4px;
   opacity: 0;
-  transition: all 1.8s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .imgOpacity {
   opacity: 1 !important;

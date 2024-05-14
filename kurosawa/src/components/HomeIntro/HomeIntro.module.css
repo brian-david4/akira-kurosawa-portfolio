@@ -29,6 +29,7 @@
 }
 .nameJp {
   font-family: "Slackside One", cursive;
+  font-size: 10vh;
   position: absolute;
   opacity: 0;
 }
@@ -36,16 +37,17 @@
   position: absolute;
   z-index: 21;
   height: 55vh;
-  width: 400px;
+  width: 350px;
   border-radius: 3px;
   background-color: ivory;
   opacity: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .imgPortrait > img {
-  height: 99.5%;
-  width: 99.5%;
+  height: 96%;
+  width: 96%;
   border-radius: 3px;
   filter: brightness(0.9);
   object-fit: cover;
@@ -54,9 +56,6 @@
 @media (max-width: 960px) {
   .nameEn {
     font-size: 50px;
-  }
-  .nameJp {
-    font-size: 60px;
   }
 }
 @media (max-width: 410px) {

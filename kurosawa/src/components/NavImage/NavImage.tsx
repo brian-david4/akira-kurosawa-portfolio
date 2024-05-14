@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import styles from "./NavImage.module.css";
-import { navVideo } from "./Anims";
 import useMousePosition from "../../hooks/useMousePosition";
 
 interface NavImageProps {
@@ -10,16 +9,14 @@ interface NavImageProps {
 
 const NavImage = ({ src, hovered }: NavImageProps) => {
   const { y } = useMousePosition();
-  const size = 250;
+  const size = 150;
 
   return (
     <motion.div
-      variants={navVideo}
       animate={{
-        right: `50vw`,
         top: `${y - size}px`,
       }}
-      transition={{ ease: "linear", type: "tween" }}
+      transition={{ type: "tween" }}
       className={styles.navImage}
     >
       <motion.video

@@ -4,6 +4,8 @@
   height: fit-content;
   border-radius: 3px;
   background-color: var(--legacy);
+  display: grid;
+  place-items: center;
 }
 .singleImage > img {
   height: 100%;
@@ -11,7 +13,7 @@
   object-fit: cover;
   border-radius: 3px;
 
-  transition: all 1.8s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .imgOpacity {
   opacity: 1;

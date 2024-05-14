@@ -1,19 +1,27 @@
 .navImage {
-  position: absolute;
+  position: fixed;
   border-radius: 15px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
   z-index: -1;
-  background-color: ivory;
+  right: 10vw;
+  width: 400px;
+  height: 400px;
 }
 .navImage > video {
-  position: absolute;
+  height: 100%;
+  width: 100%;
   z-index: 1;
-  width: 35vw;
-  height: 35vw;
   aspect-ratio: 1;
   border-radius: 15px;
   object-fit: cover;
   filter: brightness(0.8);
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .navImage {
+    width: 50vw;
+    height: 50vw;
+  }
 }
