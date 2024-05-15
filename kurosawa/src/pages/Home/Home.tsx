@@ -10,7 +10,11 @@ import fifty from "/1950.mp4";
 import sixty from "/1960.mp4";
 import rest from "/restFilm.mp4";
 
-const Home = () => {
+interface HomePageProps {
+  isIntroPlaying: boolean;
+}
+
+const Home = ({ isIntroPlaying }: HomePageProps) => {
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -25,14 +29,6 @@ const Home = () => {
     index: 3,
     isActive: true,
   });
-  const [isIntroPlaying, setIntroPlay] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIntroPlay(false);
-    }, 9500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const videos: VideoType[] = [
     { decadeTitle: "40's", src: forty, id: "fortyVideo" },

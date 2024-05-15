@@ -71,3 +71,8 @@
   gap: 1.5vh;
   overflow: visible;
 }
+@media (max-width: 768px) {
+  .linksContainer {
+    gap: 5vh;
+  }
+}
