@@ -4,10 +4,11 @@ import useMousePosition from "../../hooks/useMousePosition";
 
 interface NavImageProps {
   src: string;
+  link: string;
   hovered: boolean;
 }
 
-const NavImage = ({ src, hovered }: NavImageProps) => {
+const NavImage = ({ src, hovered, link }: NavImageProps) => {
   const { y } = useMousePosition();
   const size = 150;
 
@@ -20,6 +21,7 @@ const NavImage = ({ src, hovered }: NavImageProps) => {
       className={styles.navImage}
     >
       <motion.video
+        id={link === "/greatness" ? "sixtyVideo" : ""}
         animate={{
           opacity: hovered ? 1 : 0,
           transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },

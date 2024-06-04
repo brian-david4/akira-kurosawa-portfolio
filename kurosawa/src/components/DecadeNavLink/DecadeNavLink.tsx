@@ -46,7 +46,7 @@ const DecadeNavLink = ({ link }: DecadeNavLinkProps) => {
         </motion.div>
       </div>
       <AnimatePresence mode="wait">
-        <NavImage hovered={isHovered} src={link.vidSrc} />
+        <NavImage link={link.url} hovered={isHovered} src={link.vidSrc} />
       </AnimatePresence>
     </>
   );
