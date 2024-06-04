@@ -36,3 +36,9 @@ video {
   color: ivory;
   mix-blend-mode: screen;
 }
+@media (max-width: 768px) {
+  .backgroundImage > video {
+    transform: rotate(90deg) scale(2.5);
+    object-fit: contain;
+  }
+}

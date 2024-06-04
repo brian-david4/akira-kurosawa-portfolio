@@ -90,13 +90,24 @@ body {
   display: inline-block !important;
 }
 
-#fortyVideo,
-#fiftyVideo {
-  scale: 1.5;
+#fortyVideo {
+  scale: 1.47;
 }
-#sixtyVideo {
+#fiftyVideo {
   scale: 1.45;
 }
+#sixtyVideo {
+  scale: 1.4;
+}
 #restVideo {
-  scale: 1.25;
+  scale: 1.1;
+}
+@media (max-width: 768px) {
+  #fortyVideo,
+  #fiftyVideo,
+  #sixtyVideo,
+  #restVideo {
+    scale: 1;
+    object-position: middle;
+  }
 }
